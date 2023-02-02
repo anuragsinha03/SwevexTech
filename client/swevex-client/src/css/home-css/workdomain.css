@@ -1,0 +1,24 @@
+.workdomain-border::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    border-bottom: 2px solid white;
+    width: 80%;
+ }
+
+ @media (min-width: 768px){
+    .workdomain-border{
+        font-size: 44px;
+        padding-bottom: 15px;
+    }
+    .workdomain-border::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        border-bottom: 4px solid white;
+        width: 80%;
+    }
+
+}

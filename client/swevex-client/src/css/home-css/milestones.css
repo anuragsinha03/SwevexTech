@@ -1,0 +1,8 @@
+@media (min-width: 768px){
+    .milestone-number{
+        font-size: 60px;
+    }
+    .milestone-category{
+        font-size: 36px;
+    }
+}

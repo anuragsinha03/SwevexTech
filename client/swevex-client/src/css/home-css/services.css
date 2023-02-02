@@ -1,0 +1,64 @@
+.services-border::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    border-bottom: 2px solid black;
+    width: 80%;
+ }
+
+.active-card, .service-card:hover{
+    background-color: #0894DE;
+    color: #fff;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.service-card{
+    min-height: 143px;
+}
+
+
+
+@media (min-width: 768px){
+    .services-border{
+        font-size: 44px;
+        padding-bottom: 15px;
+    }
+    .services-border::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        border-bottom: 4px solid black;
+        width: 80%;
+    }
+    .cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card-heading{
+        font-size: 20px;
+    }
+    .card-description{
+        font-size: 16px;
+        font-weight: 200;
+    }
+    .service-card{
+        height: 300px;
+        gap: 1rem;
+    }
+    .card-img{
+        width: 90px;
+        aspect-ratio: 1;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width:1024px){
+    .card-heading{
+        font-size: 24px;
+    }
+    .card-description{
+        font-size: 18px;
+        font-weight: 200;
+    }
+}
