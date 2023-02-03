@@ -3,6 +3,7 @@
 # dependencies
 client/swevex-client/node_modules
 server/node_modules
+server/config/var
 /.pnp
 .pnp.js
 
