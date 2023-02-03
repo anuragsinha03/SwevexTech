@@ -7,7 +7,6 @@ const config = {
 }
 export async function ContactFormAPI(values) {
     const URL = `${BASE_URL}contact-us`
-    console.log(URL)
     try {
         const response = await axios.post(URL, values, config)
         return response

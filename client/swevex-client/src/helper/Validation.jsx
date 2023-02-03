@@ -40,6 +40,7 @@ const contactFormVerify = (error = {}, values) => {
     } else if (values.message.length < 2) {
         error.message = "name should be greater than 2 characters"
     }
+    console.log(error)
     return error
 }
 

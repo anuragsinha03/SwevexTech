@@ -44,6 +44,7 @@ function ContactForm() {
             type="text"
             name="name"
           />
+          {errors.name && <div>{errors.name}</div>}
           <p className="font-extralight">
             YOUR EMAIL <span className="text-[#FF0000]">*</span>
           </p>
@@ -84,7 +85,7 @@ function ContactForm() {
             onChange={handleChange}
             onBlur={handleBlur}
             values={values.message}
-            className="h-[100px] bg-[#d9d9d9] p-2 mb-4 hover:border-1 border-black"
+            className="h-[100px] bg-[#d9d9d9] p-2 mb-4 hover:border-1 border-black font-extralight hover:bg-[#007abc]"
             name="message"
           />
           <button
