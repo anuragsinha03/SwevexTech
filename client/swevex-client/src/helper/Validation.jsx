@@ -41,7 +41,25 @@ const contactFormVerify = (error = {}, values) => {
   return error;
 };
 
-// export async function loginValidation(values) {
-//     const errors = registerVerify({}, values)
-//     return errors
-// }
+export async function loginValidation(values) {
+  const errors = adminLoginVerify({}, values)
+  return errors
+}
+
+
+const adminLoginVerify = (error = {}, values) => {
+  if (!values.username) {
+    error.username = "username Required";
+  } else if (values.username.length <= 3) {
+    error.username = "username should be greater than 3 characters";
+  }
+
+  if (!values.password) {
+    error.password = "password Required";
+  } else if (values.password.length <= 6) {
+    error.password = "password should be greater than 6 characters";
+  }
+
+
+  return error;
+};

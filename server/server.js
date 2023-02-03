@@ -13,6 +13,7 @@ app.use(cors());
 
 
 app.use("/api/auth", auth);
+app.use("/api/private", auth);
 
 const PORT = process.env.PORT || 5001;
 
