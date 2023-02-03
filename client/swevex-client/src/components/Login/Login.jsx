@@ -2,15 +2,15 @@ import React from 'react'
 
 function Login() {
     return (
-        <div className="Login | grid place-content-center h-[100vh]">
-            <div className="loginContainer ">
-                <div className="login-username-input">
+        <div className="Login | flex justify-center items-center h-[100vh]">
+            <div className="loginContainer | flex flex-col gap-4 bg-[#0894DE] max-w-[955px]">
+                <div className="login-username-input flex flex-col ">
                     <label htmlFor="username">Username</label>
-                    <input type="text" name="username" />
+                    <input type="text" name="username" className='border-2 w-[662px] h-[50px]' />
                 </div>
-                <div className="login-password-input">
+                <div className="login-password-input | flex flex-col ">
                     <label htmlFor="Password">Password</label>
-                    <input type="text" name="Password" />
+                    <input type="text" name="Password" className='border-2 w-[662px] h-[50px]' />
                 </div>
             </div>
         </div>
