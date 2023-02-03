@@ -4,7 +4,6 @@ import CreateCard from "./CreateCard";
 import servicesData from "./servicesData";
 
 function createCards(card, indexVal) {
-  console.log(indexVal);
   if (indexVal === 0) {
     return (
       <CreateCard

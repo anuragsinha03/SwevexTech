@@ -1,6 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
+function handleOpeningPages(navigate, name) {
+  // console.log(window.location.pathname);
+  let baseURL = `${name}`;
+
+  if (window.location.pathname == "/") {
+    baseURL = `services/${name}`;
+  }
+  navigate(baseURL);
+}
 
 function CreateCard(props) {
+  const navigate = useNavigate();
   return (
     <div
       className={
@@ -8,6 +20,7 @@ function CreateCard(props) {
           ? "active-card service-card | flex flex-col justify-center items-center border-2 border-black rounded-lg px-2 gap-[2px] "
           : "service-card | flex flex-col justify-center items-center border-2 border-black rounded-lg px-2"
       }
+      onClick={() => handleOpeningPages(navigate, props.name)}
     >
       <img
         className="card-img | w-[30px] aspect-square mb-[8px]"

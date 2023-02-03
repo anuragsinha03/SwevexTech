@@ -45,7 +45,9 @@ function DesktopNavBar() {
         <li className="dropdown">
           <NavLink to="/services">SERVICES</NavLink>
           <div className="dropdown-content | uppercase">
-            <NavLink to="#">IT Infrastructure</NavLink>
+            <NavLink to="services/IT%20INFRASTRUCTURE">
+              IT Infrastructure
+            </NavLink>
             <NavLink to="#">Data Processing</NavLink>
             <NavLink to="#">Web Development</NavLink>
             <NavLink to="#">E-Commerce</NavLink>
