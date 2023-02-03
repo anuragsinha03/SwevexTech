@@ -1,46 +1,94 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import { useFormik } from "formik";
 
 function ApplyForm() {
+  let params = useParams()
+  const intialValue = {
+    name: '',
+    email: '',
+    phone: '',
+    jobRole: '',
+    resume: '',
+  }
+
+  const { values, errors, handleBlur, handleChange, handleSubmit } = useFormik({
+    handleBlur: false,
+    handleChange: false,
+    initialValues: intialValue,
+    // validate: registerValidate,
+    onSubmit: (values) => {
+      console.log(values)
+
+
+    }
+  })
   return (
     <div className="flex justify-center my-8 ">
-      <section className="flex flex-col gap-2 w-[80%] md:w-[40%]">
+      <form className="flex flex-col gap-2 w-[80%] md:w-[40%]" onSubmit={handleSubmit}>
         <p className="font-extralight">
           YOUR NAME <span className="text-[#FF0000]">*</span>
         </p>
         <input
+          onChange={handleChange}
+          onBlur={handleBlur}
+          values={values.name}
           className=" h-[40px] bg-[#d9d9d9] p-2 hover:border-1 hover:border-black"
           type="text"
+          name="name"
         />
         <p className="font-extralight">
           YOUR EMAIL <span className="text-[#FF0000]">*</span>
         </p>
         <input
+          onChange={handleChange}
+          onBlur={handleBlur}
+          values={values.email}
           className=" h-[40px] bg-[#d9d9d9] p-2 hover:border-1 border-black"
           type="email"
+          name="email"
         />
         <p className="font-extralight">
           YOUR PHONE <span className="text-[#FF0000]">*</span>
         </p>
+        {intialValue.resume}
         <input
+          onChange={handleChange}
+          onBlur={handleBlur}
+          values={values.phone}
           className=" h-[40px] bg-[#d9d9d9] p-2 hover:border-1 border-black"
           type="tel"
+          name="phone"
         />
         <p className="font-extralight">
           JOB ROLE <span className="text-[#FF0000]">*</span>
         </p>
-        <select className=" h-[40px] bg-[#d9d9d9] p-2 hover:border-1 border-black">
-          <option value="">SALES</option>
-          <option value="">MARKETING</option>
-          <option value="">TECHNICAL</option>
+        <select
+          onChange={handleChange}
+          onBlur={handleBlur}
+          values={values.jobRole}
+          className=" h-[40px] bg-[#d9d9d9] p-2 hover:border-1 border-black"
+          name="jobRole">
+          <option value="" selected disabled hidden>{params.id}</option>
+          <option value="Sales">Sales</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Technical">Technical</option>
         </select>
         <p className="font-extralight">
           UPLOAD YOUR RESUME <span className="text-[#FF0000]">*</span>
         </p>
-        <input className="mb-4" type="file" />
-        <button className="h-[60px] bg-[#0894DE] text-white text-[30px] font-extralight">
+        <input
+          onChange={handleChange}
+          onBlur={handleBlur}
+          values={values.resume}
+          className="mb-4"
+          type="file"
+          name="resume" />
+        <button type="submit"
+          className="h-[60px] bg-[#0894DE] text-white text-[30px] font-extralight">
           APPLY
         </button>
-      </section>
+      </form>
     </div>
   );
 }

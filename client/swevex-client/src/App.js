@@ -8,6 +8,8 @@ import Contact from "./components/contact/Contact";
 import Apply from "./components/careers/Apply";
 import ServiceTemplate from "./components/services/ServiceTemplate";
 
+// Convert every a tag which are simple links to Link tag and import react-router-dom
+
 function App() {
   return (
     <BrowserRouter>
@@ -16,12 +18,9 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="services" element={<Services />} />
-          <Route
-            path="services/servicetemplate"
-            element={<ServiceTemplate />}
-          />
+          <Route path="services/servicetemplate" element={<ServiceTemplate />}/>
           <Route path="careers" element={<Careers />} />
-          <Route path="careers/apply" element={<Apply />} />
+          <Route path="careers/apply/:id" element={<Apply />} />
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
