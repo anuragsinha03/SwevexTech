@@ -7,6 +7,7 @@ import Careers from "./components/careers/Careers";
 import Contact from "./components/contact/Contact";
 import Apply from "./components/careers/Apply";
 import ServiceTemplate from "./components/services/ServiceTemplate";
+import Login from "./components/Login/Login";
 
 // Convert every a tag which are simple links to Link tag and import react-router-dom
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="careers" element={<Careers />} />
           <Route path="careers/apply/:id" element={<Apply />} />
           <Route path="contact" element={<Contact />} />
+          <Route path ="admin-login" element = {<Login />}/>
         </Route>
       </Routes>
     </BrowserRouter>
