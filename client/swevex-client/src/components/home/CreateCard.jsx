@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function handleOpeningPages(navigate, name) {
-  // console.log(window.location.pathname);
   let baseURL = `${name}`;
 
   if (window.location.pathname == "/") {
@@ -17,8 +16,8 @@ function CreateCard(props) {
     <div
       className={
         props.activeCard
-          ? "active-card service-card | flex flex-col justify-center items-center border-2 border-black rounded-lg px-2 gap-[2px] "
-          : "service-card | flex flex-col justify-center items-center border-2 border-black rounded-lg px-2"
+          ? "active-card service-card | flex flex-col justify-center items-center border-2 border-black rounded-lg px-2 gap-[2px] select-none"
+          : "service-card | flex flex-col justify-center items-center border-2 border-black rounded-lg px-2 select-none"
       }
       onClick={() => handleOpeningPages(navigate, props.name)}
     >
@@ -27,8 +26,8 @@ function CreateCard(props) {
         src={props.imgURL}
         alt=""
       />
-      <h1 className="card-heading | text-xs font-medium">{props.name}</h1>
-      <p className="card-description | text-[10px] font-extralight text-center">
+      <h1 className="card-heading | text-xs font-medium ">{props.name}</h1>
+      <p className="card-description | text-[10px] font-extralight text-center ">
         {props.description}{" "}
       </p>
     </div>

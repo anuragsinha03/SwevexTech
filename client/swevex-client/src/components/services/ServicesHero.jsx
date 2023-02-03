@@ -1,10 +1,8 @@
 import React from "react";
-import ItHero from "../../images/it-service-hero.svg";
 import Footer from "../home/Footer";
-import img1 from "../../images/it-infrastructure-img1.svg";
-import img2 from "../../images/it-infrastructure-img2.svg";
 
 function ServicesHero(props) {
+  console.log(props);
   return (
     <div>
       <section>
@@ -36,7 +34,6 @@ function ServicesHero(props) {
             </p>
           </div>
         </div>
-
         <Footer />
       </section>
     </div>

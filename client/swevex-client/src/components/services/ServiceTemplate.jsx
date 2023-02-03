@@ -15,16 +15,19 @@ function ServiceTemplate() {
     <div>
       <Navbar page="services" />
       {ServicesPage.map((value) => {
-        console.log(value);
-        <ServicesHero
-          img1={value.img1}
-          title={value.title}
-          para1={value.para1}
-          img2={value.img2}
-          para2={value.para2}
-          img3={value.img3}
-          para3={value.para3}
-        />;
+        return (
+          <div>
+            <ServicesHero
+              img1={value.img1}
+              title={value.title}
+              para1={value.para1}
+              img2={value.img2}
+              para2={value.para2}
+              img3={value.img3}
+              para3={value.para3}
+            />
+          </div>
+        );
       })}
     </div>
   );

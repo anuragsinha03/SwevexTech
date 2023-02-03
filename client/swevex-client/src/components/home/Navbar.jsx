@@ -48,11 +48,11 @@ function DesktopNavBar() {
             <NavLink to="services/IT%20INFRASTRUCTURE">
               IT Infrastructure
             </NavLink>
-            <NavLink to="#">Data Processing</NavLink>
-            <NavLink to="#">Web Development</NavLink>
-            <NavLink to="#">E-Commerce</NavLink>
-            <NavLink to="#">Customer Support</NavLink>
-            <NavLink to="#">Marketing</NavLink>
+            <NavLink to="services/DATA%20PROCESSING">Data Processing</NavLink>
+            <NavLink to="services/WEB%20DEVELOPMENT">Web Development</NavLink>
+            <NavLink to="services/E-COMMERCE">E-Commerce</NavLink>
+            <NavLink to="services/CUSTOMER%20SUPPORT">Customer Support</NavLink>
+            <NavLink to="services/MARKETING">Marketing</NavLink>
           </div>
         </li>
         <li className="careers">

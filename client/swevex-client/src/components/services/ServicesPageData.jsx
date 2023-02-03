@@ -1,4 +1,4 @@
-import ItHero from "../../images/it-infra.svg";
+import ItHero from "../../images/it-service-hero.svg";
 import Itimg1 from "../../images/it-infrastructure-img1.svg";
 import Itimg2 from "../../images/it-infrastructure-img2.svg";
 

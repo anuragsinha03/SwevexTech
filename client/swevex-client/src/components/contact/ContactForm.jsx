@@ -1,16 +1,15 @@
 import React from "react";
-import { useFormik } from "formik"
+import { useFormik } from "formik";
 import { contactFormValidate } from "../../helper/Validation";
 import { ContactFormAPI } from "../../api/endpointApi.jsx";
 function ContactForm() {
-
   const intitialValue = {
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-  }
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  };
   const { values, errors, handleBlur, handleChange, handleSubmit } = useFormik({
     validateOnBlur: false,
     validateOnChange: false,
@@ -20,8 +19,8 @@ function ContactForm() {
       const responsePromise = ContactFormAPI(values);
       const response = await responsePromise;
       console.log(response);
-    }
-  })
+    },
+  });
 
   return (
     <div>
@@ -32,7 +31,10 @@ function ContactForm() {
       </div>
 
       <div className="flex justify-center my-8 ">
-        <form className="flex flex-col gap-2 w-[80%] md:w-[40%]" onSubmit={handleSubmit}>
+        <form
+          className="flex flex-col gap-2 w-[80%] md:w-[40%]"
+          onSubmit={handleSubmit}
+        >
           <p className="font-extralight">
             YOUR NAME <span className="text-[#FF0000]">*</span>
           </p>
@@ -86,12 +88,13 @@ function ContactForm() {
             onChange={handleChange}
             onBlur={handleBlur}
             values={values.message}
-            className="h-[100px] bg-[#d9d9d9] p-2 mb-4 hover:border-1 border-black font-extralight hover:bg-[#007abc]"
+            className="h-[100px] bg-[#d9d9d9] p-2 mb-4 hover:border-1 border-black font-extralight "
             name="message"
           />
           <button
             type="submit"
-            className="h-[60px] bg-[#0894DE] text-white text-[30px] font-extralight">
+            className="h-[60px] bg-[#0894DE] text-white text-[30px] font-extralight hover:bg-[#007abc]"
+          >
             CONTACT
           </button>
         </form>
