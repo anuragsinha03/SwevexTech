@@ -42,7 +42,7 @@ function ContactForm() {
             YOUR MESSAGE <span className="text-[#FF0000]">*</span>
           </p>
           <textarea className="h-[100px] bg-[#d9d9d9] p-2 mb-4 hover:border-1 border-black" />
-          <button className="h-[60px] bg-[#0894DE] text-white text-[30px] font-extralight">
+          <button className="h-[60px] bg-[#0894DE] text-white text-[30px] font-extralight hover:bg-[#007abc]">
             CONTACT
           </button>
         </section>
