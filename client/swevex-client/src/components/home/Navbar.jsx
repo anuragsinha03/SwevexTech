@@ -3,8 +3,9 @@ import logo from "../../images/swevex-logo.svg";
 import openMenu from "../../images/openMenu.svg";
 import "../../css/general-css/general.css";
 import { NavLink } from "react-router-dom";
+import "../../css/home-css/hero.css";
 
-// Mobile navigation bar functional componet 
+// Mobile navigation bar functional componet
 function MobileNavBar() {
   return (
     <>
@@ -19,7 +20,7 @@ function MobileNavBar() {
         <li className="services">
           <NavLink to="/services">SERVICES</NavLink>
         </li>
-        <li className="careers" >
+        <li className="careers">
           <NavLink to="/careers">CAREERS</NavLink>
         </li>
         <li className="contact">
@@ -27,10 +28,10 @@ function MobileNavBar() {
         </li>
       </ul>
     </>
-  )
+  );
 }
 
-// Desktop navigation bar functional componet 
+// Desktop navigation bar functional componet
 function DesktopNavBar() {
   return (
     <>
@@ -60,7 +61,7 @@ function DesktopNavBar() {
         </li>
       </ul>
     </>
-  )
+  );
 }
 
 // Main NavBar
@@ -81,9 +82,7 @@ function Navbar() {
             alt=""
             onClick={navbarFun}
           />
-          {open && (
-            <MobileNavBar />
-          )}
+          {open && <MobileNavBar />}
         </div>
         <DesktopNavBar />
       </nav>

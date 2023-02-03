@@ -81,6 +81,7 @@ function ContactForm() {
           <p className="font-extralight">
             YOUR MESSAGE <span className="text-[#FF0000]">*</span>
           </p>
+
           <textarea
             onChange={handleChange}
             onBlur={handleBlur}

@@ -3,14 +3,14 @@ import { useParams } from "react-router-dom";
 import { useFormik } from "formik";
 
 function ApplyForm() {
-  let params = useParams()
+  let params = useParams();
   const intialValue = {
-    name: '',
-    email: '',
-    phone: '',
-    jobRole: '',
-    resume: '',
-  }
+    name: "",
+    email: "",
+    phone: "",
+    jobRole: "",
+    resume: "",
+  };
 
   const { values, errors, handleBlur, handleChange, handleSubmit } = useFormik({
     handleBlur: false,
@@ -18,14 +18,15 @@ function ApplyForm() {
     initialValues: intialValue,
     // validate: registerValidate,
     onSubmit: (values) => {
-      console.log(values)
-
-
-    }
-  })
+      console.log(values);
+    },
+  });
   return (
     <div className="flex justify-center my-8 ">
-      <form className="flex flex-col gap-2 w-[80%] md:w-[40%]" onSubmit={handleSubmit}>
+      <form
+        className="flex flex-col gap-2 w-[80%] md:w-[40%]"
+        onSubmit={handleSubmit}
+      >
         <p className="font-extralight">
           YOUR NAME <span className="text-[#FF0000]">*</span>
         </p>
@@ -68,8 +69,11 @@ function ApplyForm() {
           onBlur={handleBlur}
           values={values.jobRole}
           className=" h-[40px] bg-[#d9d9d9] p-2 hover:border-1 border-black"
-          name="jobRole">
-          <option value="" selected disabled hidden>{params.id}</option>
+          name="jobRole"
+        >
+          <option value="" selected disabled hidden>
+            {params.id}
+          </option>
           <option value="Sales">Sales</option>
           <option value="Marketing">Marketing</option>
           <option value="Technical">Technical</option>
@@ -83,9 +87,12 @@ function ApplyForm() {
           values={values.resume}
           className="mb-4"
           type="file"
-          name="resume" />
-        <button type="submit"
-          className="h-[60px] bg-[#0894DE] text-white text-[30px] font-extralight">
+          name="resume"
+        />
+        <button
+          type="submit"
+          className="h-[60px] bg-[#0894DE] text-white text-[30px] font-extralight hover:bg-[#007abc]"
+        >
           APPLY
         </button>
       </form>
