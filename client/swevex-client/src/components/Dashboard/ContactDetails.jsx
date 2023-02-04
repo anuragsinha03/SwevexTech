@@ -7,48 +7,29 @@ function ContactDetails() {
   const [contactDetails, setContactDetails] = useState([]);
   useEffect(() => {
     getContactDetails().then((response) => {
-      setContactDetails(response.data.Details);
+      setContactDetails(response.data.Details.reverse());
     });
   }, []);
-  console.log(contactDetails);
 
   return (
     <div>
       <div className="dasboard-container | h-[100vh] max-width-container">
         <DashboardNavbar />
         <div className="main-content h-[70%] ">
-          <div className="table-container | grid grid-flow-col mt-4">
-            <div className="name border-2 border-black text-center uppercase">
-              name
-            </div>
-            <div className="email border-2 border-black text-center uppercase">
-              Email
-            </div>
-            <div className="phone-no border-2 border-black text-center uppercase">
-              Phone Number
-            </div>
-            <div className="subject border-2 border-black text-center uppercase">
-              Subject
-            </div>
-            <div className="message border-2 border-black text-center uppercase">
-              Message
-            </div>
-            <div className="message border-2 border-black text-center uppercase">
-              Delete
-            </div>
-          </div>
-          <div className="table-contents | h-full overflow-y-auto border-[1px] border-black mt-4">
+          <table className="table-fixed w-full">
+            <thead>
+              <tr className="bg-[#c9c9c9] text-[10px] md:text-[16px]">
+                <th class="border border-slate-600  ">NAME</th>
+                <th class="border border-slate-600 ">EMAIL</th>
+                <th class="border border-slate-600 ">PHONE</th>
+                <th class="border border-slate-600 ">SUBJECT</th>
+                <th class="border border-slate-600 ">MESSAGE</th>
+              </tr>
+            </thead>
+          </table>
+          <div className="table-contents | h-full overflow-y-auto border-[1px] border-black ">
             {contactDetails.map((value) => {
-              return (
-                <TableContent
-                  key={value._id}
-                  name={value.name}
-                  email={value.email}
-                  phone={value.phone}
-                  subject={value.subject}
-                  message={value.message}
-                />
-              );
+              return <TableContent value={value} />;
             })}
           </div>
         </div>

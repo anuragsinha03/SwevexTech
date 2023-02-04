@@ -18,6 +18,7 @@ function Connect() {
           <a
             href="https://www.facebook.com/swevextech?mibextid=ZbWKwL"
             target="_blank"
+            rel="noreferrer"
           >
             <img
               className="hover:bg-[#4267B2] rounded md:w-[50px] md:rounded-md"
@@ -28,6 +29,7 @@ function Connect() {
           <a
             href="https://twitter.com/Swevextech?t=IZsxe0uSsIhp3Fy1cIz38Q&s=08"
             target="_blank"
+            rel="noreferrer"
           >
             <img
               className="hover:bg-[#1DA1F2] rounded md:w-[50px] md:rounded-md"
@@ -38,6 +40,7 @@ function Connect() {
           <a
             href="https://instagram.com/swevextech?igshid=ZDdkNTZiNTM="
             target="_blank"
+            rel="noreferrer"
           >
             <img
               className="hover:bg-[#E4405F] rounded md:w-[50px] md:rounded-md"
@@ -48,6 +51,7 @@ function Connect() {
           <a
             href="https://www.linkedin.com/company/swevex-tech-solution/"
             target="_blank"
+            rel="noreferrer"
           >
             <img
               className="hover:bg-[#0A66C2] rounded md:w-[50px] md:rounded-md"
@@ -55,7 +59,7 @@ function Connect() {
               alt=""
             />
           </a>
-          <a href="https://wa.me/9431567503" target="_blank">
+          <a href="https://wa.me/9431567503" target="_blank" rel="noreferrer">
             <img
               className="hover:bg-[#25D366] rounded md:w-[50px] md:rounded-md"
               src={whatsapp}

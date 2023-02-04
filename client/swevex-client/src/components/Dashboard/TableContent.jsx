@@ -1,29 +1,20 @@
 import React from "react";
 
 function TableContent(props) {
+  const { name, email, phone, subject, message } = props.value;
   return (
     <div>
-      <div className="table-content | grid grid-flow-col  ">
-        <div className="name border-b-[1px]  border-black ">{props.name}</div>
-        <div className="email border-b-[1px] border-black ">{props.email}</div>
-        <div className="phone-no border-b-[1px] border-black ">
-          {props.phone}
-        </div>
-        <div className="subjecb border-b-[1px] border-black ">
-          {props.subject}
-        </div>
-        <div className="message border-b-[1px] border-black ">
-          {props.message}
-        </div>
-        <div className="delete-btn-container border-b-[1px] border-black pr-3 flex justify-end">
-          <button
-            className="delete-btn border-[1px] border-black px-2"
-            type="button"
-          >
-            X
-          </button>
-        </div>
-      </div>
+      <table class="table-fixed border-fixed border border-slate-500 w-full">
+        <tbody>
+          <tr className="bg-[#ececec] text-[10px] md:text-[16px]">
+            <td class="border border-slate-700 break-words">{name}</td>
+            <td class="border border-slate-700 break-words">{email}</td>
+            <td class="border border-slate-700 break-words">{phone}</td>
+            <td class="border border-slate-700 break-words">{subject}</td>
+            <td class="border border-slate-700 break-words">{message}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
