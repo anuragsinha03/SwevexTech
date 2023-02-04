@@ -1,21 +1,46 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { loginValidation } from "../../helper/Validation";
+import { handleAuthVerification, handleLogin } from "../../api/endpointApi";
+
 
 function Login() {
+  const Navigate = useNavigate();
+  useEffect(() => {
+    let token = localStorage.getItem("authToken");
+    if (token) {
+      handleAuthVerification(token).then((response) => {
+        if (response.response.data.success === true) {
+          Navigate("/admin-dashboard")
+        }
+      })
+      localStorage.clear();
+    }
+
+  })
+
   const initialValue = {
     username: "",
     password: "",
   };
+
 
   const { values, errors, handleChange, handleBlur, handleSubmit } = useFormik({
     initialValues: initialValue,
     validateOnBlur: false,
     validateOnChange: false,
     validate: loginValidation,
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: async (values) => {
+      const response = await handleLogin(values);
+      if (response === "Invalid Credentials") {
+        window.localStorage.clear();
+        alert(response);
+      }
+      if (response.data.token) {
+        localStorage.setItem("authToken", response.data.token)
+        Navigate("/admin-dashboard")
+      }
     },
   });
 

@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import auth from "./routes/auth.js";
 import mongoose, { Mongoose } from "mongoose";
+import privateAuth from './routes/privateAuth.js'
 dotenv.config({path: "./config/var/.env"});
 const app = express();
 
@@ -13,7 +14,7 @@ app.use(cors());
 
 
 app.use("/api/auth", auth);
-app.use("/api/private", auth);
+app.use("/api/private", privateAuth);
 
 const PORT = process.env.PORT || 5001;
 
@@ -28,8 +29,4 @@ mongoose.connect(process.env.MONGOOSE_URL).then(() => {
 
 
 
-process.on("unhandledRejection", (err, promise) => {
-    console.log(`log Error: ${err}`);
-    server.close(() => process.exit(1));
 
-})
