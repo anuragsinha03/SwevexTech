@@ -1,9 +1,33 @@
 import React from "react";
 import "../../css/home-css/hero.css";
-import heroImg from "../../images/hero-img.svg";
+import { NavLink } from "react-router-dom";
 
 function Hero() {
   return (
+    <div className="home-hero-img">
+      <section className="max-width-container h-[280px] md:h-[100vh]">
+        <div className="left-container w-[60%]  h-full  flex flex-col justify-center gap-2 md:w-[45%] md:ml-[2rem]">
+          <div className="text-[22px] md:text-[72px] md:leading-[4.5rem] uppercase font-medium">
+            Comprehensive <span className="text-[#0894DE]">solution</span> for
+            your business
+          </div>
+          <div className="text-[12px] font-extralight md:text-[24px]">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's
+          </div>
+          <button className="w-[118px] h-[40px] md:w-[280px] md:h-[75px] text-white text-[12px] md:text-[28px] uppercase font-light  bg-[#0894DE] grid place-content-center rounded-md mt-[4px]">
+            <NavLink to="/contact">get started</NavLink>
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default Hero;
+
+{
+  /* LAYOUT USING IMG TAG WITH FLEX
     <div>
       <section className=" hero bg-[#eeeff3] flex w-full ">
         <div className="max-width-container flex">
@@ -28,8 +52,5 @@ function Hero() {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div> */
 }
-
-export default Hero;
