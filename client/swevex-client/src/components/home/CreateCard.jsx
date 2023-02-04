@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 function handleOpeningPages(navigate, name) {
   let baseURL = `${name}`;
-
   if (window.location.pathname == "/") {
     baseURL = `services/${name}`;
   }
