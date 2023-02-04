@@ -15,7 +15,7 @@ function Hero() {
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's
           </div>
-          <button className="w-[118px] h-[40px] md:w-[280px] md:h-[75px] text-white text-[12px] md:text-[28px] uppercase font-light  bg-[#0894DE] grid place-content-center rounded-md mt-[4px]">
+          <button className="w-[118px] h-[40px] md:w-[280px] md:h-[75px] text-white text-[12px] md:text-[28px] uppercase font-light  bg-[#0894DE] grid place-content-center rounded-md mt-[4px] hover:bg-[#007abc]">
             <NavLink to="/contact">get started</NavLink>
           </button>
         </div>
