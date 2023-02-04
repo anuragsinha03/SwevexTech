@@ -45,14 +45,16 @@ function DesktopNavBar() {
         <li className="dropdown">
           <NavLink to="/services">SERVICES</NavLink>
           <div className="dropdown-content | uppercase">
-            <NavLink to="services/IT%20INFRASTRUCTURE">
+            <NavLink to="/services/IT%20INFRASTRUCTURE">
               IT Infrastructure
             </NavLink>
-            <NavLink to="services/DATA%20PROCESSING">Data Processing</NavLink>
-            <NavLink to="services/WEB%20DEVELOPMENT">Web Development</NavLink>
-            <NavLink to="services/E-COMMERCE">E-Commerce</NavLink>
-            <NavLink to="services/CUSTOMER%20SUPPORT">Customer Support</NavLink>
-            <NavLink to="services/MARKETING">Marketing</NavLink>
+            <NavLink to="/services/DATA%20PROCESSING">Data Processing</NavLink>
+            <NavLink to="/services/WEB%20DEVELOPMENT">Web Development</NavLink>
+            <NavLink to="/services/E-COMMERCE">E-Commerce</NavLink>
+            <NavLink to="/services/CUSTOMER%20SUPPORT">
+              Customer Support
+            </NavLink>
+            <NavLink to="/services/MARKETING">Marketing</NavLink>
           </div>
         </li>
         <li className="careers">
