@@ -18,18 +18,22 @@ function ContactDetails() {
         <DashboardNavbar />
         <div className="main-content h-[70%] ">
           <div className="table-container | grid grid-flow-col mt-4">
-            <div className="name border-2 border-black text-center">name</div>
-            <div className="email border-2 border-black text-center">Email</div>
-            <div className="phone-no border-2 border-black text-center">
+            <div className="name border-2 border-black text-center uppercase">
+              name
+            </div>
+            <div className="email border-2 border-black text-center uppercase">
+              Email
+            </div>
+            <div className="phone-no border-2 border-black text-center uppercase">
               Phone Number
             </div>
-            <div className="subject border-2 border-black text-center">
+            <div className="subject border-2 border-black text-center uppercase">
               Subject
             </div>
-            <div className="message border-2 border-black text-center">
+            <div className="message border-2 border-black text-center uppercase">
               Message
             </div>
-            <div className="message border-2 border-black text-center">
+            <div className="message border-2 border-black text-center uppercase">
               Delete
             </div>
           </div>

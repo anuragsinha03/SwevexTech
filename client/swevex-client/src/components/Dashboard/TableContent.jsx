@@ -7,7 +7,7 @@ function TableContent(props) {
         <div className="name border-b-[1px]  border-black ">{props.name}</div>
         <div className="email border-b-[1px] border-black ">{props.email}</div>
         <div className="phone-no border-b-[1px] border-black ">
-          {props.email}
+          {props.phone}
         </div>
         <div className="subjecb border-b-[1px] border-black ">
           {props.subject}
