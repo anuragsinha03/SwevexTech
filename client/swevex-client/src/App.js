@@ -10,6 +10,8 @@ import ServiceTemplate from "./components/services/ServiceTemplate";
 import Login from "./components/Login/Login";
 import ProtectedRoutes from "./components/protectedRoutes/ProtectedRoutes";
 import Dashboard from "./components/Dashboard/Dashboard";
+import ApplicationDetails from './components/Dashboard/ApplicationDetails'
+import ContactDetails from './components/Dashboard/ContactDetails'
 
 // Convert every a tag which are simple links to Link tag and import react-router-dom
 
@@ -27,6 +29,8 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="admin-login" element={<Login />} />
           <Route path = "admin-dashboard" element= {<ProtectedRoutes Component = {Dashboard} />}/>
+          <Route path = "application-Details" element= {<ProtectedRoutes Component = {ApplicationDetails} />}/>
+          <Route path = "contact-Details" element= {<ProtectedRoutes Component = {ContactDetails} />}/>
         </Route>
       </Routes>
     </BrowserRouter>
