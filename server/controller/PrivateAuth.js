@@ -1,5 +1,6 @@
 import privateUser from "../models/privateUser.js";
 import jwt from 'jsonwebtoken';
+import  contactUs  from "../models/contactUs.js";
 
 export async function adminLogin(request, response ,next){
     const {username, password} = request.body;
@@ -19,6 +20,13 @@ export async function VerifyToken(request, response, next){
     else response.status(200).json({success:true, token})
    })
  
+}
+
+export async function getContactDetails(request,response, next){
+    let ContactUsDetails = await contactUs.find()
+    response.status(200).json({
+        Details: ContactUsDetails,
+    })
 }
 
 

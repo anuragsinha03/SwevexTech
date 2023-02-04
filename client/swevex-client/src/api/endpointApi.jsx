@@ -35,6 +35,13 @@ export async function handleAuthVerification(token) {
     } catch (error) {
         return error
     }
+}
 
-
+export async function getContactDetails() {
+    try {
+        const response = await axios.get(`${PRIVATE_URL}/get-contact-details`)
+        return response
+    } catch (error) {
+        return error
+    }
 }
