@@ -19,24 +19,24 @@ const MilestoneCounter = () => {
           <div className="w-[50px] md:w-[100px] md:mr-6">
             <div className="font-medium text-[30px] md:text-[60px]">
               {counterOn && (
-                <CountUp start={0} end={100} duration={2} delay={0} />
-              )}
-              +
-            </div>
-            <p className="font-extralight text-[18px] md:text-[36px]">
-              Clients
-            </p>
-          </div>
-          <div className="w-[100px] border-l-[1px] pl-8 border-black">
-            <div className="font-medium text-[30px] md:text-[60px]">
-              {" "}
-              {counterOn && (
                 <CountUp start={0} end={50} duration={2} delay={0} />
               )}
               +
             </div>
             <p className="font-extralight text-[18px] md:text-[36px]">
               Projects
+            </p>
+          </div>
+          <div className="w-[100px] border-l-[1px] pl-8 border-black">
+            <div className="font-medium text-[30px] md:text-[60px]">
+              {" "}
+              {counterOn && (
+                <CountUp start={0} end={100} duration={2} delay={0} />
+              )}
+              +
+            </div>
+            <p className="font-extralight text-[18px] md:text-[36px]">
+              Clients
             </p>
           </div>{" "}
         </div>

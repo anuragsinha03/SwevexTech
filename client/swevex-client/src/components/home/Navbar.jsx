@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../../images/swevex-logo.svg";
 import openMenu from "../../images/openMenu.svg";
 import "../../css/general-css/general.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../../css/home-css/hero.css";
 
 // Mobile navigation bar functional componet
@@ -77,7 +77,13 @@ function Navbar() {
     <div>
       <nav className="max-width-container | flex justify-between items-center">
         <div className=" Logo | my-4">
-          <img className="relative z-20 w-[144px] h-[76px]" src={logo} alt="" />
+          <Link to="/">
+            <img
+              className="relative z-20 w-[144px] h-[76px]"
+              src={logo}
+              alt=""
+            />
+          </Link>
         </div>
         <div className="md:hidden">
           <img

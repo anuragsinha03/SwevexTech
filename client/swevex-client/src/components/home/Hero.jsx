@@ -1,12 +1,13 @@
 import React from "react";
 import "../../css/home-css/hero.css";
+import "../../observer/observer";
 import { NavLink } from "react-router-dom";
 
 function Hero() {
   return (
     <div className="home-hero-img">
       <section className="max-width-container h-[280px] md:h-[100vh]">
-        <div className="left-container w-[60%]  h-full  flex flex-col justify-center gap-2 md:w-[45%] md:ml-[2rem]">
+        <div className="left-container  w-[60%]  h-full  flex flex-col justify-center gap-2 md:w-[45%] md:ml-[2rem]">
           <div className="text-[22px] md:text-[72px] md:leading-[4.5rem] uppercase font-medium">
             Comprehensive <span className="text-[#0894DE]">solution</span> for
             your business
@@ -15,7 +16,7 @@ function Hero() {
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's
           </div>
-          <button className="w-[118px] h-[40px] md:w-[280px] md:h-[75px] text-white text-[12px] md:text-[28px] uppercase font-light  bg-[#0894DE] grid place-content-center rounded-md mt-[4px] hover:bg-[#007abc]">
+          <button className=" | w-[118px] h-[40px] md:w-[280px] md:h-[75px] text-white text-[12px] md:text-[28px] uppercase font-light  bg-[#0894DE] grid place-content-center rounded-md mt-[4px] hover:bg-[#007abc]">
             <NavLink to="/contact">get started</NavLink>
           </button>
         </div>

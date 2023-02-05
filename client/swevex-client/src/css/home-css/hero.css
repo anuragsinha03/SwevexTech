@@ -46,6 +46,19 @@
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
+.obsHidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 4s;
+}
+
+.obsShow {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 @media (min-width: 768px) {
   .hero {
     height: 550px;
