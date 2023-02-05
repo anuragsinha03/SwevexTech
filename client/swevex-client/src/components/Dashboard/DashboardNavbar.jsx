@@ -38,7 +38,7 @@ function DashboardNavbar() {
           <div className="logout-cta">
             <img
               src={logout}
-              className="w-[30px] h-[30px] cursor-pointer "
+              className="w-[20px] md:w-[30px] cursor-pointer "
               onClick={() => handleLogout(Navaigate)}
             />{" "}
           </div>
