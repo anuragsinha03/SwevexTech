@@ -10,7 +10,7 @@ function Hero() {
   return (
     <div>
       <section>
-        <img className="w-full" src={aboutHero} alt="" />
+        <img className="w-full" src={aboutHero} alt="" loading="lazy" />
         <div className="flex justify-center ">
           <span className="services-border | relative font-medium text-2xl mt-12">
             ABOUT US
@@ -40,7 +40,7 @@ function Hero() {
         </div>
 
         <div className="max-width-container flex flex-col md:flex-row md:gap-8">
-          <img className="" src={mission} alt="" />
+          <img className="" src={mission} alt="" loading="lazy" />
           <div>
             <div className=" | relative font-medium text-2xl mt-4 border-b-[2px] border-black">
               OUR MISSION
@@ -66,7 +66,7 @@ function Hero() {
         <Affiliate />
 
         <div className="max-width-container flex flex-col md:flex-row-reverse md:gap-8">
-          <img className="" src={vision} alt="" />
+          <img className="" src={vision} alt="" loading="lazy" />
           <div className="text-right">
             <div className=" | relative font-medium text-2xl mt-4 border-b-[2px] border-black">
               OUR VISION

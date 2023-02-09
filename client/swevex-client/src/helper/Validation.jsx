@@ -6,7 +6,7 @@ export async function contactFormValidate(values) {
 const contactFormVerify = (error = {}, values) => {
   if (!values.name) {
     error.name = "Name required";
-  } else if (values.name.length <= 3) {
+  } else if (values.name.length <= 2) {
     error.name = "Name should be greater than 3 characters";
   }
 
@@ -14,7 +14,7 @@ const contactFormVerify = (error = {}, values) => {
     error.email = "Email required";
   } else if (values.email.includes(" ")) {
     error.email = "Invalid email";
-  } else if (values.email.length <= 3) {
+  } else if (values.email.length <= 2) {
     error.email = "Email should be greater than 3 characters";
   }
 
@@ -28,13 +28,13 @@ const contactFormVerify = (error = {}, values) => {
 
   if (!values.subject) {
     error.subject = "Subject required";
-  } else if (values.subject.length <= 3) {
+  } else if (values.subject.length <= 2) {
     error.subject = "Subject should be greater than 3 characters";
   }
 
   if (!values.message) {
     error.message = "Message required";
-  } else if (values.message.length <= 3) {
+  } else if (values.message.length <= 2) {
     error.message = "Message should be greater than 3 characters";
   }
   console.log(error);

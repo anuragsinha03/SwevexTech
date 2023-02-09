@@ -13,6 +13,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import ApplicationDetails from "./components/Dashboard/ApplicationDetails";
 import ContactDetails from "./components/Dashboard/ContactDetails";
 import Thankyou from "./components/contact/Thankyou";
+import ProtectedResponse from "./components/protectedRoutes/ProtectedResponse";
 
 // Convert every a tag which are simple links to Link tag and import react-router-dom
 
@@ -28,7 +29,10 @@ function App() {
           <Route path="careers" element={<Careers />} />
           <Route path="careers/apply/:id" element={<Apply />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="thankyou" element={<Thankyou />} />
+          <Route
+            path="thankyou"
+            element={<ProtectedResponse Component={Thankyou} />}
+          />
           <Route path="admin-login" element={<Login />} />
           <Route
             path="admin-dashboard"

@@ -165,6 +165,9 @@ function ContactForm() {
 
           <button
             type="submit"
+            onClick={() => {
+              localStorage.setItem("Thankyou", true);
+            }}
             className="h-[60px] bg-[#0894DE] text-white text-[30px] font-extralight hover:bg-[#007abc]"
           >
             CONTACT
