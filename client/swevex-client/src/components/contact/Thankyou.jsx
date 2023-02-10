@@ -1,13 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import thankyou from "../../images/thankyou.svg";
-import Navbar from "../../components/home/Navbar";
+// import Navbar from "../../components/home/Navbar";
 
 function Thankyou() {
   return (
     <div className="">
-      <Navbar />
-      <div className="flex justify-center items-center">
+      {/* <Navbar /> */}
+      <div className="flex justify-center items-center h-[100vh]">
         <section className="flex flex-col justify-center items-center">
           <img
             className="w-[50%] md:w-[70%]"

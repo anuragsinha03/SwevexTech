@@ -7,18 +7,18 @@ export const CarrierContainerData = [
     serviceImg: sales,
     serviceTitle: "Sales",
     serviceDescription:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Take your career to the next level while making a tangible impact on the success of the company.",
   },
   {
     serviceImg: marketing,
     serviceTitle: "Marketing",
     serviceDescription:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Be at the forefront of shaping the future of how companies connect with their customers and achieve their goals.",
   },
   {
     serviceImg: technical,
     serviceTitle: "Technical",
     serviceDescription:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Be part of a community of innovators who are dedicated to driving progress and making a positive impact.",
   },
 ];
