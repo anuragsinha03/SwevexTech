@@ -1,9 +1,10 @@
 import carrierApply from "../models/carrierApply.js"
 import contactUs from "../models/contactUs.js"
+import * as fs from 'fs'
 
 
 export async function CarrierApply(request, response , next){
-    const {name , email, phone, jobRole,resume} = request.body
+    const {name , email, phone, jobRole} = request.body
  
     try {
         const carrierApplyUser = new carrierApply({
@@ -11,7 +12,10 @@ export async function CarrierApply(request, response , next){
             email,
             phone,
             jobRole,
-            resume,
+            resume: {
+                data: fs.readFileSync('uploads/' + request.file.filename),
+                contentType: request.file.mimetype
+            }
         })
         await carrierApplyUser.save()
         response.status(200).json({
@@ -24,6 +28,10 @@ export async function CarrierApply(request, response , next){
             error: error.message,
         })
     }
+
+    fs.unlink(`uploads/${request.file.filename}`, (err)=>{
+        if(err) console.log(err);
+    })
 }
 
 export async function ContactUs(request, response, next) {
@@ -59,4 +67,8 @@ export async function ContactUs(request, response, next) {
     }
 
 }
+
+export async function sendOtp(request, response, next){
+}
+
 

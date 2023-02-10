@@ -6,7 +6,10 @@ const carrierApplySchema = new mongoose.Schema({
     email: String,
     phone: String,
     jobRole: String,
-    resume: String,
+    resume: {
+        data: Buffer,
+        contentType: String
+    }
 })
 
 const carrierApply = mongoose.model('carrierApply', carrierApplySchema);

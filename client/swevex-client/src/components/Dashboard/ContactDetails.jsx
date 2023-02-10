@@ -26,6 +26,7 @@ function ContactDetails() {
                 <th class="border border-slate-600 ">MESSAGE</th>
               </tr>
             </thead>
+
           </table>
           <div className="table-contents | h-full overflow-y-auto border-[1px] border-black ">
             {contactDetails.map((value) => {

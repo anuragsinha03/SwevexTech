@@ -5,10 +5,14 @@ import auth from "./routes/auth.js";
 import mongoose, { Mongoose } from "mongoose";
 import privateAuth from './routes/privateAuth.js'
 dotenv.config({path: "./config/var/.env"});
+
+
+
 const app = express();
 
 mongoose.set("strictQuery", true);
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 

@@ -20,10 +20,13 @@ function ContactForm() {
     onSubmit: async (values) => {
       const responsePromise = ContactFormAPI(values);
       const response = await responsePromise;
-      console.log(response);
-      response.data.success
-        ? navigate("/thankyou")
-        : alert("Something wrong happened! Please go back");
+      if (response.data.success) {
+        localStorage.setItem("Thankyou", true);
+        navigate('/thankyou');
+      } else {
+        alert("Something wrong happened! Please go back");
+
+      }
     },
   });
 
@@ -165,9 +168,6 @@ function ContactForm() {
 
           <button
             type="submit"
-            onClick={() => {
-              localStorage.setItem("Thankyou", true);
-            }}
             className="h-[60px] bg-[#0894DE] text-white text-[30px] font-extralight hover:bg-[#007abc]"
           >
             CONTACT

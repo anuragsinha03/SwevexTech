@@ -1,24 +1,33 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useFormik } from "formik";
+import { SendCarrierData } from "../../api/endpointApi";
 
 function ApplyForm() {
+  const navigate = useNavigate();
   let params = useParams();
   const intialValue = {
     name: "",
     email: "",
     phone: "",
-    jobRole: "",
+    jobRole: params.id,
     resume: "",
   };
 
-  const { values, errors, handleBlur, handleChange, handleSubmit } = useFormik({
+  const { values, errors, handleBlur, handleChange, handleSubmit, setFieldValue } = useFormik({
     handleBlur: false,
     handleChange: false,
     initialValues: intialValue,
     // validate: registerValidate,
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: async (values) => {
+      const responsePromise = SendCarrierData(values);
+      const response = await responsePromise;
+      if (response.data.success) {
+        localStorage.setItem("Thankyou", true);
+        navigate('/thankyou');
+      } else {
+        alert("Something wrong happened! Please go back");
+      }
     },
   });
   return (
@@ -26,6 +35,7 @@ function ApplyForm() {
       <form
         className="flex flex-col gap-2 w-[80%] md:w-[40%]"
         onSubmit={handleSubmit}
+        enctype="multipart/form-data"
       >
         <p className="font-extralight">
           YOUR NAME <span className="text-[#FF0000]">*</span>
@@ -67,11 +77,12 @@ function ApplyForm() {
         <select
           onChange={handleChange}
           onBlur={handleBlur}
-          values={values.jobRole}
+          values={values.jobRole === "" ? params.id : values.jobRole}
           className=" h-[40px] bg-[#d9d9d9] p-2 hover:border-1 border-black"
           name="jobRole"
         >
-          <option value="" selected disabled hidden>
+
+          <option value={params.id} selected hidden>
             {params.id}
           </option>
           <option value="Sales">Sales</option>
@@ -82,7 +93,7 @@ function ApplyForm() {
           UPLOAD YOUR RESUME <span className="text-[#FF0000]">*</span>
         </p>
         <input
-          onChange={handleChange}
+          onChange={(e) => setFieldValue('resume', e.currentTarget.files[0])}
           onBlur={handleBlur}
           values={values.resume}
           className="mb-4"
