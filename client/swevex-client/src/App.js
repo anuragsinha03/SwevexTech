@@ -17,6 +17,7 @@ import ProtectedResponse from "./components/protectedRoutes/ProtectedResponse";
 import ResetPassword from "./components/Login/ResetPassword";
 import OTP from "./components/Login/OTP";
 import ChangePassword from "./components/Login/ChangePassword";
+import LoginProtectedRoutes from "./components/protectedRoutes/LoginProtectedRoutes"
 
 // Convert every a tag which are simple links to Link tag and import react-router-dom
 
@@ -37,11 +38,11 @@ function App() {
             element={<ProtectedResponse Component={Thankyou} />}
           />
           <Route path="admin-login" element={<Login />} />
-          <Route path="resetpassword" element={<ResetPassword />} />
-          <Route path="resetpassword/otp" element={<OTP />} />
+          <Route path="reset-password" element={<ResetPassword />} />
+          <Route path="reset-password/otp" element={<OTP />} />
           <Route
-            path="resetpassword/otp/changepassword"
-            element={<ChangePassword />}
+            path="reset-password/otp/change-password"
+            element={<LoginProtectedRoutes Component = {ChangePassword} />}
           />
 
           <Route

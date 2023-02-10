@@ -1,11 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import forgotpassword from "../../images/forgotpassword.png";
 import back from "../../images/back.svg";
+import { ValidateEmailAndSendOtp } from "../../api/endpointApi";
+
+async function handleResetPassword(e, email, navigate) {
+  e.preventDefault()
+  try {
+    await ValidateEmailAndSendOtp(email)
+    navigate("/reset-password/otp")
+  } catch (error) {
+    alert(error.response.data.err);
+  }
+}
 
 function ResetPassword() {
+  const [email, setEmail] = useState("");
+  const navigate = useNavigate();
   return (
-    <div className="h-[100vh] flex justify-center items-center ">
+    < div className="h-[100vh] flex justify-center items-center " >
       <section className="  flex flex-col justify-center items-center gap-5 px-4 py-8 rounded-lg">
         <img className="w-[50px] md:w-[70px]" src={forgotpassword} alt="" />
         <div className="flex flex-col justify-center items-center">
@@ -18,7 +31,10 @@ function ResetPassword() {
           </p>
         </div>
 
-        <div className="flex flex-col w-full">
+        <form
+          className="flex flex-col w-full gap-2"
+          onSubmit={(e) => handleResetPassword(e, email, navigate)}
+        >
           <label htmlFor="email" className="font-medium">
             EMAIL
           </label>
@@ -26,14 +42,13 @@ function ResetPassword() {
             className="text-sm border-[1px] border-[#707070] p-2 rounded"
             type="email"
             placeholder="Enter authorised email ID"
+            onChange={(e) => { setEmail(e.target.value) }}
           />
-        </div>
-        <Link
-          to="/resetpassword/otp"
-          className="w-full h-[40px] bg-[#0894DE] hover:bg-[#007abc] text-white flex justify-center items-center"
-        >
-          Request OTP
-        </Link>
+          <button
+            className="w-full h-[40px] bg-[#0894DE] hover:bg-[#007abc] text-white flex justify-center items-center">
+            Request OTP
+          </button>
+        </form>
         <Link to="/admin-login">
           <div className="flex gap-2">
             {" "}
@@ -42,7 +57,7 @@ function ResetPassword() {
           </div>
         </Link>
       </section>
-    </div>
+    </div >
   );
 }
 
