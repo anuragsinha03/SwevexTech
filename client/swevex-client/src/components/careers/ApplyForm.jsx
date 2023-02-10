@@ -14,7 +14,14 @@ function ApplyForm() {
     resume: "",
   };
 
-  const { values, errors, handleBlur, handleChange, handleSubmit, setFieldValue } = useFormik({
+  const {
+    values,
+    errors,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    setFieldValue,
+  } = useFormik({
     handleBlur: false,
     handleChange: false,
     initialValues: intialValue,
@@ -24,7 +31,7 @@ function ApplyForm() {
       const response = await responsePromise;
       if (response.data.success) {
         localStorage.setItem("Thankyou", true);
-        navigate('/thankyou');
+        navigate("/thankyou");
       } else {
         alert("Something wrong happened! Please go back");
       }
@@ -81,7 +88,6 @@ function ApplyForm() {
           className=" h-[40px] bg-[#d9d9d9] p-2 hover:border-1 border-black"
           name="jobRole"
         >
-
           <option value={params.id} selected hidden>
             {params.id}
           </option>
@@ -93,12 +99,13 @@ function ApplyForm() {
           UPLOAD YOUR RESUME <span className="text-[#FF0000]">*</span>
         </p>
         <input
-          onChange={(e) => setFieldValue('resume', e.currentTarget.files[0])}
+          onChange={(e) => setFieldValue("resume", e.currentTarget.files[0])}
           onBlur={handleBlur}
           values={values.resume}
           className="mb-4"
           type="file"
           name="resume"
+          accept=".pdf, .doc, .docx"
         />
         <button
           type="submit"
