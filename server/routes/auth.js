@@ -1,5 +1,5 @@
 import express  from "express";
-import { CarrierApply, ContactUs } from "../controller/auth.js";
+import { CarrierApply, changePassword, ContactUs, sendOtp, validateOTP } from "../controller/auth.js";
 import multer from 'multer';
 import { verifyEmaill } from "../middleware/verifyEmail.js";
 const router = express.Router();
@@ -19,6 +19,8 @@ const upload = multer({storage: storage})
 
 router.route("/carrier-apply").post(upload.single('resume'), CarrierApply)
 router.route("/contact-us").post(ContactUs)
-router.route("/send-otp").post(verifyEmaill)
+router.route("/send-otp").post(verifyEmaill, sendOtp)
+router.route("/validate-otp").post(validateOTP)
+router.route("/change-password").put(changePassword)
 
 export default router;  
