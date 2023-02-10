@@ -9,13 +9,13 @@ function Hero() {
     <div className="home-hero-img">
       <section className="max-width-container h-[280px] md:h-[100vh]">
         <div className="left-container  w-[60%]  h-full  flex flex-col justify-center gap-2 md:w-[45%] md:ml-[2rem]">
-          <div className="text-[22px] md:text-[72px] md:leading-[4.5rem] uppercase font-medium">
+          <div className="text-[22px] md:text-[72px] leading-[1.5rem] md:leading-[4.5rem] uppercase font-medium">
             Comprehensive <span className="text-[#0894DE]"> solution </span> for
             your business
           </div>
           <div className="text-[12px] font-extralight md:text-[24px]">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's
+            Swevex is a ONE-STOP solution to all business, operations, and
+            execution related problems
           </div>
           <motion.div
             initial={{ x: "-100vw" }}

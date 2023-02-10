@@ -11,7 +11,7 @@ function CarrierContainerCard(props) {
   return (
     <div>
       <div className="border-2 border-black flex flex-col gap-4 justify-center items-center pt-8 rounded ">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col  items-center">
           <img
             className="w-[100px] aspect-square"
             src={props.serviceImg}
@@ -20,7 +20,7 @@ function CarrierContainerCard(props) {
           <p className="text-[28px] font-medium uppercase">
             {props.serviceTitle}
           </p>
-          <p className="text-center">{props.serviceDescription}</p>
+          <p className="text-sm text-center">{props.serviceDescription}</p>
         </div>
         <button
           type="button"

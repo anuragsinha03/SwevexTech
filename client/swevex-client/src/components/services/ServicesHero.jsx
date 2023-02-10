@@ -18,7 +18,7 @@ function ServicesHero(props) {
         </div>
 
         <div className="max-width-container flex flex-col md:flex-row md:gap-8">
-          <img className="w-[500px]" src={props.img2} alt="" />
+          <img className="md:w-[50%]" src={props.img2} alt="" />
           <div>
             <p className=" my-4 text-[10px] leading-tight font-extralight md:text-[24px]">
               {props.para2}
@@ -27,7 +27,7 @@ function ServicesHero(props) {
         </div>
 
         <div className="max-width-container flex flex-col md:flex-row-reverse md:gap-8">
-          <img className="w-[500px]" src={props.img3} alt="" />
+          <img className="md:w-[50%]" src={props.img3} alt="" />
           <div className="text-right">
             <p className=" my-4 text-[10px] leading-tight font-extralight md:text-[24px]">
               {props.para3}

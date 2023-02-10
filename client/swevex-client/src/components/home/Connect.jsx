@@ -29,7 +29,7 @@ function Connect() {
               rel="noreferrer"
             >
               <img
-                className="hover:bg-[#4267B2] rounded md:w-[50px] md:rounded-md"
+                className="hover:bg-[#4267B2] hover:rounded-2xl rounded md:w-[50px] md:rounded-md"
                 src={facebook}
                 alt=""
               />
@@ -46,7 +46,7 @@ function Connect() {
               rel="noreferrer"
             >
               <img
-                className="hover:bg-[#1DA1F2] rounded md:w-[50px] md:rounded-md"
+                className="hover:bg-[#1DA1F2] hover:rounded-2xl rounded md:w-[50px] md:rounded-md"
                 src={twitter}
                 alt=""
               />
@@ -63,7 +63,7 @@ function Connect() {
               rel="noreferrer"
             >
               <img
-                className="hover:bg-[#E4405F] rounded md:w-[50px] md:rounded-md"
+                className="hover:bg-[#E4405F] hover:rounded-2xl rounded md:w-[50px] md:rounded-md"
                 src={instagram}
                 alt=""
               />
@@ -80,7 +80,7 @@ function Connect() {
               rel="noreferrer"
             >
               <img
-                className="hover:bg-[#0A66C2] rounded md:w-[50px] md:rounded-md"
+                className="hover:bg-[#0A66C2] hover:rounded-2xl rounded md:w-[50px] md:rounded-md"
                 src={linkedin}
                 alt=""
               />
@@ -93,7 +93,7 @@ function Connect() {
           >
             <a href="https://wa.me/9431567503" target="_blank" rel="noreferrer">
               <img
-                className="hover:bg-[#25D366] rounded md:w-[50px] md:rounded-md"
+                className="hover:bg-[#25D366] hover:rounded-2xl rounded md:w-[50px] md:rounded-md"
                 src={whatsapp}
                 alt=""
               />

@@ -7,7 +7,9 @@ function Dashboard() {
       <div className="dasboard-container | h-[100vh] max-width-container">
         <DashboardNavbar />
         <div className="main-content border-2 grid place-content-center h-[85%]">
-          <h1 className="Hello-Text | uppercase text-4xl">👋 hello, admin</h1>
+          <h1 className="Hello-Text | uppercase font-bold text-2xl md:text-4xl">
+            👋 hello, admin
+          </h1>
         </div>
       </div>
     </div>

@@ -26,7 +26,7 @@ function CreateCard(props) {
         alt=""
       />
       <h1 className="card-heading | text-xs font-medium ">{props.name}</h1>
-      <p className="card-description | text-[10px] font-extralight text-center ">
+      <p className="card-description | text-[8px] md:text-[10px] font-extralight text-center ">
         {props.description}{" "}
       </p>
     </div>
