@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../home/Navbar";
 import careers from "../../images/careers.svg";
 import Footer from "../home/Footer";
-import { CarrierContainerData } from './CarrierContainerData'
+import { CarrierContainerData } from "./CarrierContainerData";
 import CarrierContainerCard from "./CarrierContainerCard";
 function Careers() {
   return (
@@ -17,7 +17,7 @@ function Careers() {
             </span>
           </div>
         </div>
-        <div className="max-width-container my-4 flex flex-col justify-center items-center gap-4 md:flex-row ">
+        <div className="max-width-container w-[1fr] my-4 grid md:grid-cols-3 gap-4 md:flex-row ">
           {CarrierContainerData.map((val, index) => {
             return (
               <CarrierContainerCard
@@ -26,7 +26,7 @@ function Careers() {
                 serviceTitle={val.serviceTitle}
                 serviceDescription={val.serviceDescription}
               />
-            )
+            );
           })}
         </div>
         <Footer />
