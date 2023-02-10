@@ -49,7 +49,11 @@ function Contact() {
               <img className="" src={email} alt="" />
             </div>
             <div>
-              <p className="font-medium">swevex.director@gmail.com</p>
+              <p className="font-medium">
+                <a href="mailto: swevex.director@gmail.com">
+                  swevex.director@gmail.com
+                </a>
+              </p>
             </div>
           </div>
 
