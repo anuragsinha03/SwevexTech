@@ -1,6 +1,7 @@
 import privateUser from "../models/privateUser.js";
 import jwt from 'jsonwebtoken';
 import  contactUs  from "../models/contactUs.js";
+import carrierApply from "../models/carrierApply.js";
 
 export async function adminLogin(request, response ,next){
     const {username, password} = request.body;
@@ -28,6 +29,35 @@ export async function getContactDetails(request,response, next){
         Details: ContactUsDetails,
     })
 }
+
+export async function getCarrieraApplyDetails(request,response, next){
+    let carrierApplyDetails = await carrierApply.find()
+    response.status(200).json({
+        Details: carrierApplyDetails,
+    })
+}
+
+export async function deleteCarrierApplyDetails(request, response, next){
+    const id = request.params.id;
+    try {
+         carrierApply.deleteOne({_id : id}).then((res) => {
+            response.status(200).json({
+                success:true,
+            })
+         }).catch((err) => {
+            response.status(400).json({
+                success:false,
+                error: err.message,
+            })
+         })
+
+    } catch (error) {
+        
+    }
+   
+}
+
+
 
 
 const sendToken = (user, statusCode, res) => {

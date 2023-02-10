@@ -14,9 +14,18 @@ export async function ContactFormAPI(values) {
     } catch (error) {
         return error.message
     }
-
-
 }
+
+export async function SendCarrierData(values) {
+    const URL = `${BASE_URL}carrier-apply`
+    try {
+        const response = await axios.post(URL, values, { headers: { "Content-Type": "multipart/form-data" } })
+        return response
+    } catch (error) {
+        return error
+    }
+}
+
 
 export async function handleLogin(values) {
     try {
@@ -44,4 +53,18 @@ export async function getContactDetails() {
     } catch (error) {
         return error
     }
+}
+
+export async function getCarrierApplyDetails() {
+    try {
+        const response = await axios.get(`${PRIVATE_URL}/get-carrier-apply-details`)
+        return response
+    } catch (error) {
+        return error
+    }
+}
+
+export async function deleteCarrierApplyDetails(id) {
+    const response = await axios.delete(`${PRIVATE_URL}/delete-carrier-apply-details/${id}`)
+    return response
 }
