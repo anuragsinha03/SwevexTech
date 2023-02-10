@@ -5,8 +5,10 @@ import { loginValidation } from "../../helper/Validation";
 import { handleAuthVerification, handleLogin } from "../../api/endpointApi";
 
 function Login() {
+
   const Navigate = useNavigate();
   useEffect(() => {
+    localStorage.clear();
     let token = localStorage.getItem("authToken");
     if (token) {
       handleAuthVerification(token).then((response) => {
@@ -92,7 +94,7 @@ function Login() {
           {" "}
           Login
         </button>
-        <Link to="/resetpassword" className="uppercase  hover:underline">
+        <Link to="/reset-password" className="uppercase  hover:underline">
           change password?
         </Link>
       </form>

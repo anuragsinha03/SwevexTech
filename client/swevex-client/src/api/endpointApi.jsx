@@ -68,3 +68,20 @@ export async function deleteCarrierApplyDetails(id) {
     const response = await axios.delete(`${PRIVATE_URL}/delete-carrier-apply-details/${id}`)
     return response
 }
+
+
+export async function ValidateEmailAndSendOtp(emailId) {
+    const response = await axios.post(`${BASE_URL}send-otp`, { emailId }, config);
+    return response
+}
+
+
+export async function validateOTP(otp) {
+    const response = await axios.post(`${BASE_URL}validate-otp`, { otp }, config);
+    return response
+}
+
+export async function loginChangePassword(password) {
+    const response = await axios.put(`${BASE_URL}change-password`, { password }, config);
+    return response
+}

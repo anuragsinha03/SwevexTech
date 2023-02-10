@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Services from "./Services";
@@ -11,6 +11,9 @@ import Footer from "./Footer";
 // import Work from "./carousel/Work";
 
 function Home() {
+  useEffect(() => {
+    localStorage.clear();
+  })
   return (
     <div className="select-none">
       <Navbar page="home" />

@@ -23,6 +23,8 @@ export async function VerifyToken(request, response, next){
  
 }
 
+
+
 export async function getContactDetails(request,response, next){
     let ContactUsDetails = await contactUs.find()
     response.status(200).json({
