@@ -22,10 +22,9 @@ function ContactForm() {
       const response = await responsePromise;
       if (response.data.success) {
         localStorage.setItem("Thankyou", true);
-        navigate('/thankyou');
+        navigate("/thankyou");
       } else {
         alert("Something wrong happened! Please go back");
-
       }
     },
   });
@@ -153,8 +152,8 @@ function ContactForm() {
               values={values.message}
               className={
                 errors.message
-                  ? "  w-full bg-[#d9d9d9] p-2 border-[1px] border-[#ff0000] outline-[#ff0000]"
-                  : "  w-full bg-[#d9d9d9] p-2"
+                  ? "  w-full bg-[#d9d9d9] p-2 border-[1px] border-[#ff0000] outline-[#ff0000] h-[140px]"
+                  : "  w-full bg-[#d9d9d9] p-2 h-[140px]"
               }
               name="message"
               required

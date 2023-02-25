@@ -22,8 +22,10 @@ function Hero() {
             animate={{ x: 0 }}
             transition={{ duration: 1 }}
           >
-            <button className=" | w-[118px] h-[40px] md:w-[280px] md:h-[75px] text-white text-[12px] md:text-[28px] uppercase font-light  bg-[#0894DE] grid place-content-center rounded-md mt-[4px] hover:bg-[#007abc]">
-              <NavLink to="/contact">get started</NavLink>
+            <button className=" | w-[160px] h-[40px] md:w-[400px] md:h-[75px] text-white text-[12px] md:text-[28px] uppercase font-light  bg-[#0894DE] grid place-content-center rounded-md mt-[4px] hover:bg-[#007abc]">
+              <NavLink to="/contact">
+                BOOK <span className="font-medium">FREE</span> CONSULTATION
+              </NavLink>
             </button>
           </motion.div>
         </div>

@@ -4,6 +4,8 @@ import amazon from "../../images/amazon-logo.svg";
 import moneytap from "../../images/moneytap-logo.svg";
 import alibaba from "../../images/alibaba-logo.svg";
 import thekabadi from "../../images/thekabadi-logo.svg";
+import taskmo from "../../images/taskmo.svg";
+import roziroti from "../../images/roziroti.svg";
 
 function Affiliate() {
   const { scrollX } = useScroll();
@@ -15,7 +17,7 @@ function Affiliate() {
           AFFILIATE PARTNER
         </span>
       </div>
-      <div className="affiliate-div | grid place-items-center grid-cols-2 mb-4 md:grid-cols-4 md:mb-8">
+      <div className="affiliate-div | grid place-items-center grid-cols-2 mb-4 md:grid-cols-6 md:mb-8">
         <motion.div
           style={{ x: "-100vw" }}
           animate={{ x: 0 }}
@@ -44,6 +46,22 @@ function Affiliate() {
           transition={{ delay: 1.5, duration: 1 }}
         >
           <img className="affiliate-img" src={thekabadi} alt="" />
+        </motion.div>
+
+        <motion.div
+          style={{ x: "-100vw" }}
+          animate={{ x: 0 }}
+          transition={{ delay: 2, duration: 1 }}
+        >
+          <img className="affiliate-img w-[150px]" src={taskmo} alt="" />
+        </motion.div>
+
+        <motion.div
+          style={{ x: "-100vw" }}
+          animate={{ x: 0 }}
+          transition={{ delay: 2.5, duration: 1 }}
+        >
+          <img className="affiliate-img w-[150px]" src={roziroti} alt="" />
         </motion.div>
       </div>
     </div>

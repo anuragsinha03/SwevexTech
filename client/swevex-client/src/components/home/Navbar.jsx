@@ -79,7 +79,7 @@ function Navbar() {
         <div className=" Logo | my-4">
           <Link to="/">
             <img
-              className="relative z-20 w-[144px] h-[76px]"
+              className="relative z-20 w-[200px] h-[110px]"
               src={logo}
               alt=""
             />

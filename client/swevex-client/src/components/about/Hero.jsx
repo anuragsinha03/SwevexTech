@@ -90,7 +90,7 @@ function Hero() {
           </div>
         </div>
 
-        <Connect />
+        {/* <Connect /> */}
         <Footer />
       </section>
     </div>

@@ -13,7 +13,7 @@ import Footer from "./Footer";
 function Home() {
   useEffect(() => {
     localStorage.clear();
-  })
+  });
   return (
     <div className="select-none">
       <Navbar page="home" />
@@ -23,8 +23,8 @@ function Home() {
       {/* <Work /> */}
       <Milestones />
       <Affiliate />
-      <Testimonials />
-      <Connect />
+      {/* <Testimonials /> */}
+      {/* <Connect /> */}
       <Footer />
     </div>
   );
