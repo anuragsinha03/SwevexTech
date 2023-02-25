@@ -45,16 +45,12 @@ function DesktopNavBar() {
         <li className="dropdown">
           <NavLink to="/services">SERVICES</NavLink>
           <div className="dropdown-content | uppercase">
-            <NavLink to="/services/IT%20INFRASTRUCTURE">
-              IT Infrastructure
-            </NavLink>
-            <NavLink to="/services/DATA%20PROCESSING">Data Processing</NavLink>
-            <NavLink to="/services/WEB%20DEVELOPMENT">Web Development</NavLink>
-            <NavLink to="/services/E-COMMERCE">E-Commerce</NavLink>
-            <NavLink to="/services/CUSTOMER%20SUPPORT">
-              Customer Support
-            </NavLink>
-            <NavLink to="/services/MARKETING">Marketing</NavLink>
+            <NavLink to="/services/itinfrastructure">IT Infrastructure</NavLink>
+            <NavLink to="/services/dataprocessing">Data Processing</NavLink>
+            <NavLink to="/services/webdevelopment">Web Development</NavLink>
+            <NavLink to="/services/e-commerce">E-Commerce</NavLink>
+            <NavLink to="/services/customersupport">Customer Support</NavLink>
+            <NavLink to="/services/marketing">Marketing</NavLink>
           </div>
         </li>
         <li className="careers">
@@ -79,7 +75,7 @@ function Navbar() {
         <div className=" Logo | my-4">
           <Link to="/">
             <img
-              className="relative z-20 w-[200px] h-[110px]"
+              className="relative z-20 w-[150px] h-[70px] md:w-[200px] md:h-[110px]"
               src={logo}
               alt=""
             />

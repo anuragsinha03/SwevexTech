@@ -10,7 +10,7 @@ function CarrierContainerCard(props) {
   const Navigate = useNavigate();
   return (
     <div>
-      <div className="border-2 border-black flex flex-col gap-4 justify-center items-center pt-8 rounded ">
+      <div className="border-[1px] border-black flex flex-col gap-4 justify-center items-center pt-8 rounded ">
         <div className="flex flex-col  items-center">
           <img
             className="w-[100px] aspect-square"
@@ -24,7 +24,7 @@ function CarrierContainerCard(props) {
         </div>
         <button
           type="button"
-          className="w-full bg-[#0894DE] uppercase p-4 text-white text-xl font-extralight md:text-2xl border-t-2 border-black hover:bg-[#007abc] "
+          className="w-full bg-[#0894DE] uppercase p-4 text-white text-xl font-extralight md:text-2xl  hover:bg-[#007abc] "
           onClick={() =>
             HandleOnclickingApplyHere(props.serviceTitle, Navigate)
           }

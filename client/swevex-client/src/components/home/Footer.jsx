@@ -12,7 +12,7 @@ function Footer() {
   return (
     <div>
       <section className=" bg-[#0894DE] text-white py-12">
-        <div className="max-width-container grid place-items-start px-[10%] md:place-items-center grid-cols-1 md:gap-[12rem] md:grid-cols-3 ">
+        <div className="max-width-container grid place-items-start grid-cols-1 gap-[2rem] md:gap-[14rem] md:grid-cols-3 ">
           <div>
             <p className="text-[18px] md:text-[24px] font-bold">QUICK LINKS</p>
             <Link to="/">
@@ -37,22 +37,22 @@ function Footer() {
 
           <div>
             <p className="text-[18px] md:text-[24px] font-bold">SERVICES</p>
-            <Link to="/services/IT%20INFRASTRUCTURE">
+            <Link to="/services/itinfrastructure">
               <p className="hover:text-[#000]">▶ IT Infrastructure</p>
             </Link>
-            <Link to="/services/DATA%20PROCESSING">
+            <Link to="/services/dataprocessing">
               <p className="hover:text-[#000]">▶ Data Processing</p>
             </Link>
-            <Link to="/services/WEB%20DEVELOPMENT">
+            <Link to="/services/webdevelopment">
               <p className="hover:text-[#000]">▶ Web Development</p>
             </Link>
-            <Link to="/services/E-COMMERCE">
+            <Link to="/services/e-commerce">
               <p className="hover:text-[#000]">▶ E-Commerce</p>
             </Link>
-            <Link to="/services/CUSTOMER%20SUPPORT">
+            <Link to="/services/customersupport">
               <p className="hover:text-[#000]">▶ Customer Support</p>
             </Link>
-            <Link to="/services/MARKETING">
+            <Link to="/services/marketing">
               <p className="hover:text-[#000]">▶ Marketing</p>
             </Link>
           </div>
@@ -145,23 +145,11 @@ function Footer() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-2">
-              <div>
-                <img className="" src={email} alt="" />
-              </div>
-              <div>
-                <p className="font-medium">
-                  <a href="mailto: swevex.director@gmail.com">
-                    swevex.director@gmail.com
-                  </a>
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      <section className=" border-t-[1px] border-black flex justify-center items-center ">
+      <section className=" flex justify-center items-center ">
         <div className="text-[8px] my-1 md:text-[24px]">
           © 2020 SWEVEX TECH SOLUTION (OPC) PRIVATE LIMITED. All Rights Reserved
         </div>

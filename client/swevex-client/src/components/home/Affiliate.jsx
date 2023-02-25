@@ -17,7 +17,7 @@ function Affiliate() {
           AFFILIATE PARTNER
         </span>
       </div>
-      <div className="affiliate-div | grid place-items-center grid-cols-2 mb-4 md:grid-cols-6 md:mb-8">
+      <div className="affiliate-div | grid place-items-center grid-cols-2 mb-4 md:grid-cols-6 md:mb-8 gap-[4rem]">
         <motion.div
           style={{ x: "-100vw" }}
           animate={{ x: 0 }}

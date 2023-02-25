@@ -53,12 +53,12 @@ function Hero() {
               strong foundation of industry expertise, continued innovation, and
               a shared set of core values:
               <ul>
-                <li>➡ Teamwork</li>
-                <li>➡ Clients Satisfaction</li>
-                <li>➡ Passion and commitment</li>
-                <li>➡ Personal responsibility for results</li>
-                <li>➡ A conviction that simpler is better</li>
-                <li>➡ Integrity and honesty in all of our relationships</li>
+                <li>▶ Teamwork</li>
+                <li>▶ Clients Satisfaction</li>
+                <li>▶ Passion and commitment</li>
+                <li>▶ Personal responsibility for results</li>
+                <li>▶ A conviction that simpler is better</li>
+                <li>▶ Integrity and honesty in all of our relationships</li>
               </ul>
             </p>
           </div>

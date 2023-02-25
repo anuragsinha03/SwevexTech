@@ -3,10 +3,17 @@ import { useNavigate } from "react-router-dom";
 
 function handleOpeningPages(navigate, name) {
   let baseURL = `${name}`;
+  console.log(baseURL);
+  console.log(name.replaceAll(/ /g, "").toLowerCase());
   if (window.location.pathname == "/") {
-    baseURL = `services/${name}`;
+    console.log(window.location.pathname);
+    baseURL = `services/${name.replaceAll(/ /g, "").toLowerCase()}`;
+    navigate(baseURL);
+  } else if (window.location.pathname == "/services") {
+    console.log(window.location.pathname);
+    baseURL = `/${name.replaceAll(/ /g, "").toLowerCase()}`;
+    navigate("/services" + baseURL);
   }
-  navigate(baseURL);
 }
 
 function CreateCard(props) {
