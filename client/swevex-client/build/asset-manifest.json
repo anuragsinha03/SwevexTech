@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.64133249.css",
-    "main.js": "/static/js/main.58069767.js",
+    "main.css": "/static/css/main.307836a9.css",
+    "main.js": "/static/js/main.b833edf5.js",
     "static/media/about-hero.svg": "/static/media/about-hero.28872acbb1fed985511a23922415b97e.svg",
     "static/media/careers.svg": "/static/media/careers.71e520e6bd8eebc4ffb64db4adbd99e1.svg",
     "static/media/contact-hero.svg": "/static/media/contact-hero.3953552644ff40b15ca0e68d770d9c21.svg",
@@ -39,6 +39,7 @@
     "static/media/customer-support-img2.svg": "/static/media/customer-support-img2.e2a6eb6747e50cdbb8693205d1026fb8.svg",
     "static/media/customer-support-img3.svg": "/static/media/customer-support-img3.827feca9796dc839af8d06a36d961f21.svg",
     "static/media/success.svg": "/static/media/success.199880c330f6827bf5bc48b8cbb95499.svg",
+    "static/media/chat.svg": "/static/media/chat.ee2a6c658d9e41386e7affe71b1ceac7.svg",
     "static/media/forgotpassword.png": "/static/media/forgotpassword.380f7cec2a9d71335ab7.png",
     "static/media/marketing-img2.svg": "/static/media/marketing-img2.2f97f2c86d471b230f56b15615b2574d.svg",
     "static/media/ecommerce.svg": "/static/media/ecommerce.70abc0bb0cace99c9afa149a65f8124e.svg",
@@ -62,16 +63,16 @@
     "static/media/ebay.svg": "/static/media/ebay.5b9cd69cf91fef18aaa0597ddfcb837c.svg",
     "static/media/phone.svg": "/static/media/phone.f04672c55c30d300020eee9dbc99cb15.svg",
     "static/media/logout.svg": "/static/media/logout.2fddab3c5fab7c1b501f553f50d2c2f8.svg",
+    "index.html": "/index.html",
     "static/media/location.svg": "/static/media/location.59ada6334e1028668fd2da9085ce027a.svg",
     "static/media/email.svg": "/static/media/email.97879d27c961c9113bcc8a689d13c0dd.svg",
     "static/media/openMenu.svg": "/static/media/openMenu.407d96f0e9d1a36140913ade1478fa27.svg",
     "static/media/back.svg": "/static/media/back.21cf8b818a491ef5abe4798e0fbc54ba.svg",
-    "index.html": "/index.html",
-    "main.64133249.css.map": "/static/css/main.64133249.css.map",
-    "main.58069767.js.map": "/static/js/main.58069767.js.map"
+    "main.307836a9.css.map": "/static/css/main.307836a9.css.map",
+    "main.b833edf5.js.map": "/static/js/main.b833edf5.js.map"
   },
   "entrypoints": [
-    "static/css/main.64133249.css",
-    "static/js/main.58069767.js"
+    "static/css/main.307836a9.css",
+    "static/js/main.b833edf5.js"
   ]
 }
