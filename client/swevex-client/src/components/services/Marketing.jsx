@@ -4,12 +4,20 @@ import marketinghero from "../../images/marketing-img1.svg";
 import img1 from "../../images/marketing-img2.svg";
 import img2 from "../../images/marketing-img3.svg";
 import Footer from "../home/Footer";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import ChatWithUs from "../home/ChatWithUs";
 function Marketing() {
   return (
     <main>
       <Navbar />
-      <img className="w-full" src={marketinghero} alt="" />
+      <img
+        data-aos="fade-down"
+        data-aos-delay="150"
+        className="w-full"
+        src={marketinghero}
+        alt=""
+      />
       <div className="flex justify-center ">
         <span className="services-border | relative font-medium text-2xl mt-12">
           MARKETING
@@ -32,7 +40,13 @@ function Marketing() {
         </p>
       </div>
       <div className="max-width-container flex flex-col md:flex-row md:gap-8">
-        <img className="md:w-[300px]" src={img1} alt="" />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="100"
+          className="md:w-[300px]"
+          src={img1}
+          alt=""
+        />
         <div>
           <p className=" my-4 text-[10px] leading-tight font-extralight md:text-[24px]">
             Swevex Tech helps businesses build their brand and increase their
@@ -52,7 +66,13 @@ function Marketing() {
       </div>
 
       <div className="max-width-container flex flex-col md:flex-row-reverse md:gap-8">
-        <img className="md:w-[300px]" src={img2} alt="" />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="100"
+          className="md:w-[300px]"
+          src={img2}
+          alt=""
+        />
 
         <div className="">
           <p className=" my-4 text-[10px] leading-tight font-extralight md:text-[24px]">
@@ -70,9 +90,10 @@ function Marketing() {
           </p>
         </div>
       </div>
+      <ChatWithUs />
       <Footer />
     </main>
   );
 }
-
+AOS.init();
 export default Marketing;

@@ -4,13 +4,22 @@ import careers from "../../images/careers.svg";
 import Footer from "../home/Footer";
 import { CarrierContainerData } from "./CarrierContainerData";
 import CarrierContainerCard from "./CarrierContainerCard";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import ChatWithUs from "../home/ChatWithUs";
 function Careers() {
   return (
     <div>
       <section>
         <Navbar page="careers" />
         <div>
-          <img className="w-full" src={careers} alt="" />
+          <img
+            data-aos="fade-down"
+            data-aos-delay="150"
+            className="w-full"
+            src={careers}
+            alt=""
+          />
           <div className="flex justify-center ">
             <span className="services-border | relative font-medium text-2xl my-4">
               JOIN OUR TEAMS
@@ -29,10 +38,11 @@ function Careers() {
             );
           })}
         </div>
+        <ChatWithUs />
         <Footer />
       </section>
     </div>
   );
 }
-
+AOS.init();
 export default Careers;

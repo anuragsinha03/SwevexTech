@@ -1,5 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function HandleOnclickingApplyHere(CarrierPath, Navigate) {
   const URL_FOR_DIRECTION = `/careers/apply/${CarrierPath}`;
@@ -10,7 +12,11 @@ function CarrierContainerCard(props) {
   const Navigate = useNavigate();
   return (
     <div>
-      <div className="border-[1px] border-black flex flex-col gap-4 justify-center items-center pt-8 rounded ">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="100"
+        className="border-[1px] border-black flex flex-col gap-4 justify-center items-center pt-8 rounded "
+      >
         <div className="flex flex-col  items-center">
           <img
             className="w-[100px] aspect-square"
@@ -35,5 +41,5 @@ function CarrierContainerCard(props) {
     </div>
   );
 }
-
+AOS.init();
 export default CarrierContainerCard;

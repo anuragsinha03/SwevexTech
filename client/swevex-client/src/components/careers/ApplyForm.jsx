@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useFormik } from "formik";
 import { SendCarrierData } from "../../api/endpointApi";
+import ChatWithUs from "../home/ChatWithUs";
 
 function ApplyForm() {
   const navigate = useNavigate();
@@ -114,6 +115,7 @@ function ApplyForm() {
           APPLY
         </button>
       </form>
+      <ChatWithUs />
     </div>
   );
 }

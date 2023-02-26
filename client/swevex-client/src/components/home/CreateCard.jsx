@@ -1,5 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function handleOpeningPages(navigate, name) {
   let baseURL = `${name}`;
@@ -20,6 +22,8 @@ function CreateCard(props) {
   const navigate = useNavigate();
   return (
     <div
+      data-aos="zoom-in-up"
+      data-aos-delay="100"
       className={
         props.activeCard
           ? "active-card service-card | flex flex-col justify-center items-center border-2 border-black rounded-lg px-2 gap-[2px] select-none"
@@ -39,5 +43,5 @@ function CreateCard(props) {
     </div>
   );
 }
-
+AOS.init();
 export default CreateCard;

@@ -8,6 +8,7 @@ import Affiliate from "./Affiliate";
 import Testimonials from "./Testimonials";
 import Connect from "./Connect";
 import Footer from "./Footer";
+import ChatWithUs from "./ChatWithUs";
 // import Work from "./carousel/Work";
 
 function Home() {
@@ -25,6 +26,7 @@ function Home() {
       <Affiliate />
       {/* <Testimonials /> */}
       {/* <Connect /> */}
+      <ChatWithUs />
       <Footer />
     </div>
   );

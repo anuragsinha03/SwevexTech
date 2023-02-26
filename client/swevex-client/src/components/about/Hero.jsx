@@ -4,13 +4,22 @@ import mission from "../../images/mission.svg";
 import Affiliate from "../home/Affiliate";
 import vision from "../../images/vision.svg";
 import Connect from "../home/Connect";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Footer from "../home/Footer";
 
 function Hero() {
   return (
     <div>
       <section>
-        <img className="w-full" src={aboutHero} alt="" loading="lazy" />
+        <img
+          data-aos="fade-down"
+          data-aos-delay="150"
+          className="w-full"
+          src={aboutHero}
+          alt=""
+          loading="lazy"
+        />
         <div className="flex justify-center ">
           <span className="services-border | relative font-medium text-2xl mt-12">
             ABOUT US
@@ -41,7 +50,14 @@ function Hero() {
         </div>
 
         <div className="max-width-container flex flex-col md:flex-row md:gap-8">
-          <img className="md:w-[50%]" src={mission} alt="" loading="lazy" />
+          <img
+            data-aos="zoom-in-up"
+            data-aos-delay="100"
+            className="md:w-[50%]"
+            src={mission}
+            alt=""
+            loading="lazy"
+          />
           <div>
             <div className=" | relative font-medium text-2xl mt-4 border-b-[2px] border-black">
               OUR MISSION
@@ -67,7 +83,14 @@ function Hero() {
         <Affiliate />
 
         <div className="max-width-container flex flex-col md:flex-row-reverse md:gap-8">
-          <img className="md:w-[50%]" src={vision} alt="" loading="lazy" />
+          <img
+            data-aos="zoom-in-up"
+            data-aos-delay="100"
+            className="md:w-[50%]"
+            src={vision}
+            alt=""
+            loading="lazy"
+          />
           <div className="text-right">
             <div className=" | relative font-medium text-2xl mt-4 border-b-[2px] border-black">
               OUR VISION
@@ -96,5 +119,5 @@ function Hero() {
     </div>
   );
 }
-
+AOS.init();
 export default Hero;

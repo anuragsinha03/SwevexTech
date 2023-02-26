@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import thankyou from "../../images/thankyou.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 // import Navbar from "../../components/home/Navbar";
 
 function Thankyou() {
@@ -10,6 +12,8 @@ function Thankyou() {
       <div className="flex justify-center items-center h-[100vh]">
         <section className="flex flex-col justify-center items-center">
           <img
+            data-aos="zoom-out-up"
+            data-aos-delay="150"
             className="w-[50%] md:w-[70%]"
             src={thankyou}
             alt=""
@@ -34,5 +38,5 @@ function Thankyou() {
     </div>
   );
 }
-
+AOS.init();
 export default Thankyou;

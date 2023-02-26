@@ -4,12 +4,20 @@ import webhero from "../../images/webdev-img1.svg";
 import img1 from "../../images/webdev-img2.svg";
 import success from "../../images/success.svg";
 import Footer from "../home/Footer";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import ChatWithUs from "../home/ChatWithUs";
 function WebDevelopment() {
   return (
     <main>
       <Navbar />
-      <img className="w-full" src={webhero} alt="" />
+      <img
+        data-aos="fade-down"
+        data-aos-delay="150"
+        className="w-full"
+        src={webhero}
+        alt=""
+      />
       <div className="flex justify-center ">
         <span className="services-border | relative font-medium text-2xl mt-12">
           WEB DEVELOPMENT
@@ -30,7 +38,13 @@ function WebDevelopment() {
         </p>
       </div>
       <div className="max-width-container flex flex-col md:flex-row md:gap-8">
-        <img className="md:w-[300px]" src={img1} alt="" />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="100"
+          className="md:w-[300px]"
+          src={img1}
+          alt=""
+        />
         <div>
           <p className=" my-4 text-[10px] leading-tight font-extralight md:text-[24px]">
             Businesses are in the race of making their presence on Google and
@@ -55,7 +69,11 @@ function WebDevelopment() {
         <div className="">
           <p className=" my-4 text-[10px] leading-tight font-extralight md:text-[24px]">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center place-items-center">
-              <div className="grid place-items-center  border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="150"
+                className="grid place-items-center  border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]"
+              >
                 <div className="font-medium flex gap-4 ">
                   <img className="w-[10px] md:w-[25px]" src={success} alt="" />
                   <p>Better Quality</p>
@@ -66,7 +84,11 @@ function WebDevelopment() {
                   increase the meter of sales, and reduce the costs.
                 </p>
               </div>
-              <div className="grid place-items-center border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="150"
+                className="grid place-items-center border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]"
+              >
                 <div className="font-medium flex gap-4 ">
                   <img className="w-[10px] md:w-[25px]" src={success} alt="" />
                   <p>Access to the Technology</p>
@@ -77,7 +99,11 @@ function WebDevelopment() {
                   compromising the quality.
                 </p>
               </div>
-              <div className="grid place-items-center border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="150"
+                className="grid place-items-center border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]"
+              >
                 <div className="font-medium flex gap-4 ">
                   <img className="w-[10px] md:w-[25px]" src={success} alt="" />
                   <p>Risk Reduction Factor</p>
@@ -92,9 +118,10 @@ function WebDevelopment() {
           </p>
         </div>
       </div>
+      <ChatWithUs />
       <Footer />
     </main>
   );
 }
-
+AOS.init();
 export default WebDevelopment;

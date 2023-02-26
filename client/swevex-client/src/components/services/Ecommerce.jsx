@@ -11,12 +11,21 @@ import paytm from "../../images/paytm.svg";
 import ebay from "../../images/ebay.svg";
 import success from "../../images/success.svg";
 import Footer from "../home/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import ChatWithUs from "../home/ChatWithUs";
 
 function Ecommerce() {
   return (
     <main>
       <Navbar />
-      <img className="w-full" src={ecommhero} alt="" />
+      <img
+        data-aos="fade-down"
+        data-aos-delay="150"
+        className="w-full"
+        src={ecommhero}
+        alt=""
+      />
       <div className="flex justify-center ">
         <span className="services-border | relative font-medium text-2xl mt-12">
           E-COMMERCE
@@ -35,7 +44,13 @@ function Ecommerce() {
         </p>
       </div>
       <div className="max-width-container flex flex-col md:flex-row md:gap-8">
-        <img className="md:w-[300px]" src={img1} alt="" />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="100"
+          className="md:w-[300px]"
+          src={img1}
+          alt=""
+        />
         <div>
           <p className=" my-4 text-[10px] leading-tight font-extralight md:text-[24px]">
             If you join these or some of these marketplaces as a seller, will
@@ -50,12 +65,48 @@ function Ecommerce() {
       </div>
 
       <div className="grid grid-cols-3 place-items-center">
-        <img className="w-[150px]" src={amazon} alt="" />
-        <img className="w-[150px]" src={flipkart} alt="" />
-        <img className="w-[150px]" src={meesho} alt="" />
-        <img className="w-[150px]" src={snapdeal} alt="" />
-        <img className="w-[150px]" src={paytm} alt="" />
-        <img className="w-[150px]" src={ebay} alt="" />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="110"
+          className="w-[150px]"
+          src={amazon}
+          alt=""
+        />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="120"
+          className="w-[150px]"
+          src={flipkart}
+          alt=""
+        />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="130"
+          className="w-[150px]"
+          src={meesho}
+          alt=""
+        />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="140"
+          className="w-[150px]"
+          src={snapdeal}
+          alt=""
+        />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="150"
+          className="w-[150px]"
+          src={paytm}
+          alt=""
+        />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="160"
+          className="w-[150px]"
+          src={ebay}
+          alt=""
+        />
       </div>
 
       <div className="max-width-container flex flex-col md:flex-row-reverse md:gap-8">
@@ -64,7 +115,11 @@ function Ecommerce() {
         <div className="">
           <p className=" my-4 text-[10px] leading-tight font-extralight md:text-[24px]">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center place-items-center">
-              <div className="grid place-items-center  border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="150"
+                className="grid place-items-center  border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]"
+              >
                 <div className="font-medium flex gap-4 ">
                   <img className="w-[10px] md:w-[25px]" src={success} alt="" />
                   <p>Ecommerce Consulting</p>
@@ -74,7 +129,11 @@ function Ecommerce() {
                   proof success blueprint by our experts team.
                 </p>
               </div>
-              <div className="grid place-items-center border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="150"
+                className="grid place-items-center border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]"
+              >
                 <div className="font-medium flex gap-4 ">
                   <img className="w-[10px] md:w-[25px]" src={success} alt="" />
                   <p>Account Management</p>
@@ -84,7 +143,11 @@ function Ecommerce() {
                   Meesho & Many More Ecommerce platforms)
                 </p>
               </div>
-              <div className="grid place-items-center border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="150"
+                className="grid place-items-center border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]"
+              >
                 <div className="font-medium flex gap-4 ">
                   <img className="w-[10px] md:w-[25px]" src={success} alt="" />
                   <p>Cataloging & Product Listing</p>
@@ -99,9 +162,10 @@ function Ecommerce() {
           </p>
         </div>
       </div>
+      <ChatWithUs />
       <Footer />
     </main>
   );
 }
-
+AOS.init();
 export default Ecommerce;

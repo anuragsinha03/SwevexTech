@@ -4,12 +4,20 @@ import custhero from "../../images/customer-support-img1.svg";
 import img1 from "../../images/customer-support-img2.svg";
 import img2 from "../../images/customer-support-img3.svg";
 import Footer from "../home/Footer";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import ChatWithUs from "../home/ChatWithUs";
 function CustomerSupport() {
   return (
     <main>
       <Navbar />
-      <img className="w-full" src={custhero} alt="" />
+      <img
+        data-aos="fade-down"
+        data-aos-delay="150"
+        className="w-full"
+        src={custhero}
+        alt=""
+      />
       <div className="flex justify-center ">
         <span className="services-border | relative font-medium text-2xl mt-12">
           CUSTOMER SUPPORT
@@ -47,7 +55,13 @@ function CustomerSupport() {
         </ul>
       </div>
       <div className="max-width-container flex flex-col md:flex-row md:gap-8">
-        <img className="md:w-[300px]" src={img1} alt="" />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="100"
+          className="md:w-[300px]"
+          src={img1}
+          alt=""
+        />
         <div>
           <p className=" my-4 text-[10px] leading-tight font-extralight md:text-[24px]">
             Swevex Tech offers a convincing case for ROI (return on investment)
@@ -66,7 +80,13 @@ function CustomerSupport() {
       </div>
 
       <div className="max-width-container flex flex-col md:flex-row-reverse md:gap-8">
-        <img className="md:w-[300px]" src={img2} alt="" />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="100"
+          className="md:w-[300px]"
+          src={img2}
+          alt=""
+        />
 
         <div className="">
           <p className=" my-4 text-[10px] leading-tight font-extralight md:text-[24px]">
@@ -81,9 +101,10 @@ function CustomerSupport() {
           </p>
         </div>
       </div>
+      <ChatWithUs />
       <Footer />
     </main>
   );
 }
-
+AOS.init();
 export default CustomerSupport;

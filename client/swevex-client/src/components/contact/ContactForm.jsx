@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { contactFormValidate } from "../../helper/Validation";
 import { ContactFormAPI } from "../../api/endpointApi.jsx";
+import AOS from "aos";
+import "aos/dist/aos.css";
 function ContactForm() {
   const navigate = useNavigate();
   const intitialValue = {
@@ -166,6 +168,8 @@ function ContactForm() {
           </div>
 
           <button
+            data-aos="fade-up"
+            data-aos-delay="100"
             type="submit"
             className="h-[60px] bg-[#0894DE] text-white text-[30px] font-extralight hover:bg-[#007abc]"
           >
@@ -176,5 +180,5 @@ function ContactForm() {
     </div>
   );
 }
-
+AOS.init();
 export default ContactForm;
