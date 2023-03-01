@@ -1,5 +1,6 @@
 import React from "react";
 import aboutHero from "../../images/about-hero.svg";
+import placeholderAboutHero from "../../images/about-hero.jpg";
 import mission from "../../images/mission.svg";
 import Affiliate from "../home/Affiliate";
 import vision from "../../images/vision.svg";
@@ -7,18 +8,19 @@ import Connect from "../home/Connect";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "../home/Footer";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Hero() {
   return (
     <div>
       <section>
-        <img
-          data-aos="fade-down"
-          data-aos-delay="150"
-          className="w-full"
+        <LazyLoadImage
+          width="100%"
           src={aboutHero}
+          placeholderSrc={placeholderAboutHero}
+          effect="blur"
           alt=""
-          loading="lazy"
         />
         <div className="flex justify-center ">
           <span className="services-border | relative font-medium text-2xl mt-12">

@@ -20,7 +20,7 @@ function Hero() {
           <motion.div
             initial={{ x: "-100vw" }}
             animate={{ x: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.5 }}
           >
             <button className=" | w-[160px] h-[40px] md:w-[400px] md:h-[75px] text-white text-[12px] md:text-[28px] uppercase font-light  bg-[#0894DE] grid place-content-center rounded-md mt-[4px] hover:bg-[#007abc]">
               <NavLink to="/contact">
@@ -35,32 +35,3 @@ function Hero() {
 }
 
 export default Hero;
-
-{
-  /* LAYOUT USING IMG TAG WITH FLEX
-    <div>
-      <section className=" hero bg-[#eeeff3] flex w-full ">
-        <div className="max-width-container flex">
-          <div className="left-hero | ml-[2rem] w-[60%] flex flex-col h-full justify-center relative z-[2] gap-[5px]">
-            <h1 className="hero-heading | text-2xl uppercase font-medium">
-              Comprehensive <span className="text-[#0894DE]">solution</span> for
-              your business
-            </h1>
-            <p className="hero-para | font-extralight text-sm">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's{" "}
-            </p>
-            <a
-              href="/contact"
-              className="cta-btn | border-2 text-white text-[12px] uppercase font-medium w-[118px] h-[40px] bg-[#0894DE] grid place-content-center rounded-md mt-[4px] "
-            >
-              Get Started
-            </a>
-          </div>
-          <div className="right-hero | w-[40%] flex justify-end items-end h-full">
-            <img className="hero-img | h-auto w-auto" src={heroImg} alt="" />
-          </div>
-        </div>
-      </section>
-    </div> */
-}

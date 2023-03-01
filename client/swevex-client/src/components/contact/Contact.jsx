@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../home/Navbar";
+import placeholderContactHero from "../../images/contact-hero.jpg";
 import contact from "../../images/contact-hero.svg";
 import location from "../../images/location.svg";
 import email from "../../images/email.svg";
@@ -8,19 +9,25 @@ import ContactForm from "./ContactForm";
 import Footer from "../home/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import ChatWithUs from "../home/ChatWithUs";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import www from "../../images/www.svg";
+
 function Contact() {
   return (
     <div>
       <section>
         <Navbar page="contact" />
         <div>
-          <img
+          <LazyLoadImage
             data-aos="fade-down"
             data-aos-delay="150"
-            className="w-full"
+            width="100%"
             src={contact}
+            placeholderSrc={placeholderContactHero}
             alt=""
+            effect="blur"
           />
           <div className="flex justify-center ">
             <span className="services-border | relative font-medium text-2xl my-6">
@@ -62,8 +69,8 @@ function Contact() {
             </div>
             <div>
               <p className="font-medium">
-                <a href="mailto: swevex.director@gmail.com">
-                  swevex.director@gmail.com
+                <a href="mailto: director@swevextech.com">
+                  director@swevextech.com
                 </a>
               </p>
             </div>
@@ -75,6 +82,18 @@ function Contact() {
             </div>
             <div>
               <p className="font-medium">+91 9431567503</p>
+            </div>
+          </div>
+          <div className="flex gap-2">
+            <div>
+              <img className="" src={www} alt="" />
+            </div>
+            <div>
+              <p className="font-medium">
+                <a href="https://www.swevextech.com" target="_blank">
+                  swevextech.com
+                </a>
+              </p>
             </div>
           </div>
         </div>

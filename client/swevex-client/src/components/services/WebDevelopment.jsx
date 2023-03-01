@@ -7,6 +7,13 @@ import Footer from "../home/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ChatWithUs from "../home/ChatWithUs";
+import html from "../../images/html.svg";
+import css from "../../images/css.svg";
+import js from "../../images/js.svg";
+import react from "../../images/react.svg";
+import node from "../../images/node.svg";
+import mongo from "../../images/mongo.svg";
+
 function WebDevelopment() {
   return (
     <main>
@@ -61,6 +68,50 @@ function WebDevelopment() {
             and designing visual solutions.
           </p>
         </div>
+      </div>
+      <div className="grid grid-cols-3 place-items-center gap-8">
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="110"
+          className="w-[60px] md:w-[80px]"
+          src={html}
+          alt=""
+        />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="120"
+          className="w-[60px] md:w-[80px]"
+          src={css}
+          alt=""
+        />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="130"
+          className="w-[60px] md:w-[80px]"
+          src={js}
+          alt=""
+        />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="140"
+          className="w-[60px] md:w-[80px]"
+          src={react}
+          alt=""
+        />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="150"
+          className="w-[80px] md:w-[100px]"
+          src={node}
+          alt=""
+        />
+        <img
+          data-aos="zoom-out-up"
+          data-aos-delay="160"
+          className="w-[80px] md:w-[100px]"
+          src={mongo}
+          alt=""
+        />
       </div>
 
       <div className="max-width-container flex flex-col md:flex-row-reverse md:gap-8">

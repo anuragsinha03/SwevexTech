@@ -1,23 +1,28 @@
 import React from "react";
 import Navbar from "../home/Navbar";
 import careers from "../../images/careers.svg";
+import placeholderCareersHero from "../../images/careers.jpg";
 import Footer from "../home/Footer";
 import { CarrierContainerData } from "./CarrierContainerData";
 import CarrierContainerCard from "./CarrierContainerCard";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import ChatWithUs from "../home/ChatWithUs";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 function Careers() {
   return (
     <div>
       <section>
         <Navbar page="careers" />
         <div>
-          <img
+          <LazyLoadImage
             data-aos="fade-down"
             data-aos-delay="150"
-            className="w-full"
+            width="100%"
             src={careers}
+            placeholderSrc={placeholderCareersHero}
+            effect="blur"
             alt=""
           />
           <div className="flex justify-center ">

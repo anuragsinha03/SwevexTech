@@ -7,6 +7,7 @@ import whatsapp from "../../images/whatsapp-logo.svg";
 import instagram from "../../images/instagram-logo.svg";
 import email from "../../images/email.svg";
 import phone from "../../images/phone.svg";
+import www from "../../images/www.svg";
 
 function Footer() {
   return (
@@ -21,13 +22,13 @@ function Footer() {
             <Link to="/about">
               <p className="hover:text-[#000]">▶ About Us</p>
             </Link>
-            <Link to="">
-              <p className="hover:text-[#000]">▶ Shipping Policy</p>
+            <Link to="/privacypolicy">
+              <p className="hover:text-[#000]">▶ Privacy Policy</p>
             </Link>
-            <Link to="">
+            <Link to="/refundpolicy">
               <p className="hover:text-[#000]">▶ Refund Policy</p>
             </Link>
-            <Link to="">
+            <Link to="/termsandconditions">
               <p className="hover:text-[#000]">▶ Terms and Conditions</p>
             </Link>
             <Link to="/contact">
@@ -141,6 +142,22 @@ function Footer() {
                 <p className="font-medium">
                   <a href="mailto: director@swevextech.com">
                     director@swevextech.com
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-2">
+              <div>
+                <img className="" src={www} alt="" />
+              </div>
+              <div>
+                <p className="font-medium">
+                  <a
+                    href="https://www.swevextech.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    swevextech.com
                   </a>
                 </p>
               </div>

@@ -1,6 +1,6 @@
 import axios from "axios";
-const BASE_URL = "/api/auth/";
-const PRIVATE_URL = "/api/private";
+const BASE_URL = "http://localhost/api/auth/";
+const PRIVATE_URL = "http://localhost/api/private";
 const config = {
   Headers: {
     "Content-type": "Application/json",

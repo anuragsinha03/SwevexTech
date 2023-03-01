@@ -1,8 +1,18 @@
-@media (min-width: 768px){
-    .milestone-number{
-        font-size: 60px;
-    }
-    .milestone-category{
-        font-size: 36px;
-    }
+@media (min-width: 768px) {
+  .milestone-number {
+    font-size: 60px;
+  }
+  .milestone-category {
+    font-size: 36px;
+  }
+}
+
+.milestoneContainer::after {
+  content: "";
+  position: absolute;
+  width: 1%;
+  height: 100%;
+  margin-left: calc(5rem / -2);
+  background-color: black;
+  top: 0;
 }

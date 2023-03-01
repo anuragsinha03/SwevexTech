@@ -10,7 +10,12 @@ function MobileNavBar() {
   return (
     <>
       <ul className="mobile-ul flex flex-col justify-center items-center absolute inset-0 bg-slate-50 text-[25px] gap-2 z-10">
-        {/* <img className='w-[18px] h-[16px] absolute top-0 right-0 my-[32px] mx-[45px]' src={closeMenu} alt="" onClick={navbarFun}/> */}
+        {/* <img
+          className="w-[18px] h-[16px] absolute top-0 right-0 my-[32px] mx-[45px]"
+          src={closeMenu}
+          alt=""
+          onClick={navbarFun}
+        /> */}
         <li className="home">
           <NavLink to="/">HOME</NavLink>
         </li>

@@ -5,7 +5,7 @@ import moneytap from "../../images/moneytap-logo.svg";
 import alibaba from "../../images/alibaba-logo.svg";
 import thekabadi from "../../images/thekabadi-logo.svg";
 import taskmo from "../../images/taskmo.svg";
-import roziroti from "../../images/roziroti.svg";
+import flipkart from "../../images/flipkart.svg";
 
 function Affiliate() {
   const { scrollX } = useScroll();
@@ -61,7 +61,7 @@ function Affiliate() {
           animate={{ x: 0 }}
           transition={{ delay: 2.5, duration: 1 }}
         >
-          <img className="affiliate-img w-[150px]" src={roziroti} alt="" />
+          <img className="affiliate-img w-[150px]" src={flipkart} alt="" />
         </motion.div>
       </div>
     </div>

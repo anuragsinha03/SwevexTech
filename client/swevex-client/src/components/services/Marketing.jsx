@@ -3,6 +3,7 @@ import Navbar from "../home/Navbar";
 import marketinghero from "../../images/marketing-img1.svg";
 import img1 from "../../images/marketing-img2.svg";
 import img2 from "../../images/marketing-img3.svg";
+import success from "../../images/success.svg";
 import Footer from "../home/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -39,7 +40,7 @@ function Marketing() {
           marketing channel provided by Swevex Tech.
         </p>
       </div>
-      <div className="max-width-container flex flex-col md:flex-row md:gap-8">
+      {/* <div className="max-width-container flex flex-col md:flex-row md:gap-8">
         <img
           data-aos="zoom-out-up"
           data-aos-delay="100"
@@ -63,9 +64,9 @@ function Marketing() {
             essential part of any business's overall marketing strategy.
           </p>
         </div>
-      </div>
+      </div> */}
 
-      <div className="max-width-container flex flex-col md:flex-row-reverse md:gap-8">
+      {/* <div className="max-width-container flex flex-col md:flex-row-reverse md:gap-8">
         <img
           data-aos="zoom-out-up"
           data-aos-delay="100"
@@ -87,6 +88,109 @@ function Marketing() {
             the right guidance of Swevex Tech Solutions, businesses can benefit
             from expert guidance, cutting-edge technologies, and a customized
             approach that can help them stand out in a crowded marketplace.
+          </p>
+        </div>
+      </div> */}
+      <div className="max-width-container flex flex-col md:flex-row-reverse md:gap-8">
+        {/* <img className="md:w-[300px]" src={img2} alt="" /> */}
+
+        <div className="">
+          <p className=" my-4 text-[10px] leading-tight font-extralight md:text-[24px]">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center place-items-center">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="150"
+                className="grid place-items-center  border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]"
+              >
+                <div className="font-medium flex gap-4 ">
+                  <img className="w-[10px] md:w-[25px]" src={success} alt="" />
+                  <p>Search Engine Optimization</p>
+                </div>
+                <p>
+                  Looking to get more traffic on your website? Get started with
+                  SEO services to skyrocket your visibility in Search Engine
+                  where more than 90% traffic comes from. Get found on the web
+                  with SEO.​
+                </p>
+              </div>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="150"
+                className="grid place-items-center border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]"
+              >
+                <div className="font-medium flex gap-4 ">
+                  <img className="w-[10px] md:w-[25px]" src={success} alt="" />
+                  <p>Search Engine Marketing</p>
+                </div>
+                <p>
+                  97% of online experiences begin with a search engine, but 41%
+                  of clicks go to the top three paid ads on the search results
+                  page. Drive instant traffic to your website​
+                </p>
+              </div>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="150"
+                className="grid place-items-center border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]"
+              >
+                <div className="font-medium flex gap-4 ">
+                  <img className="w-[10px] md:w-[25px]" src={success} alt="" />
+                  <p>Social Media Marketing</p>
+                </div>
+                <p>
+                  An average user spends more than 2 hours a day on the Social
+                  Media Platforms like Facebook and Instagram. Make your
+                  presence felt on Social Media and make the best of it. ​
+                </p>
+              </div>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="150"
+                className="grid place-items-center border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]"
+              >
+                <div className="font-medium flex gap-4 ">
+                  <img className="w-[10px] md:w-[25px]" src={success} alt="" />
+                  <p>Email Marketing​</p>
+                </div>
+                <p>
+                  Execute on Every Possible Email Communication. Deliver Smart
+                  Content. Start Now! Leverage Customer Data. Target Your
+                  Audience. 1-to-1 Customer Journeys. Streamline & Send Emails.
+                  Personalised Content.
+                </p>
+              </div>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="150"
+                className="grid place-items-center border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]"
+              >
+                <div className="font-medium flex gap-4 ">
+                  <img className="w-[10px] md:w-[25px]" src={success} alt="" />
+                  <p>Content Marketing</p>
+                </div>
+                <p>
+                  Content is the King! Create visually engaging, immersive
+                  content to capture your audience’s attention. Blog in the
+                  right format. Drive leads with your content with Content
+                  Marketing Services.
+                </p>
+              </div>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="150"
+                className="grid place-items-center border-[1px] border-black w-[60%] md:w-[100%]   rounded-lg md:h-[300px] py-6 px-2 md:py-12 md:px-4 hover:shadow-2xl border-l-[20px] border-l-[#0894DE]"
+              >
+                <div className="font-medium flex gap-4 ">
+                  <img className="w-[10px] md:w-[25px]" src={success} alt="" />
+                  <p>Digital Strategy</p>
+                </div>
+                <p>
+                  Taking the digital route is the best way to make your business
+                  stand out in the competitive. We create innovative digital
+                  strategies that take your business to the next level.
+                </p>
+              </div>
+            </div>
           </p>
         </div>
       </div>

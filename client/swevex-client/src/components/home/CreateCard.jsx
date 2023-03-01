@@ -26,8 +26,8 @@ function CreateCard(props) {
       data-aos-delay="100"
       className={
         props.activeCard
-          ? "active-card service-card | flex flex-col justify-center items-center border-2 border-black rounded-lg px-2 gap-[2px] select-none"
-          : "service-card | flex flex-col justify-center items-center border-2 border-black rounded-lg px-2 select-none"
+          ? "active-card service-card | flex flex-col justify-center items-center border-2 border-black rounded-lg px-2 gap-[2px] cursor-pointer select-none"
+          : "service-card | flex flex-col justify-center items-center border-2 border-black rounded-lg px-2 select-none cursor-pointer"
       }
       onClick={() => handleOpeningPages(navigate, props.name)}
     >

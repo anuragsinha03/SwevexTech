@@ -6,7 +6,7 @@ import Services from "./components/services/Services";
 import Careers from "./components/careers/Careers";
 import Contact from "./components/contact/Contact";
 import Apply from "./components/careers/Apply";
-import ServiceTemplate from "./components/services/ServiceTemplate";
+// import ServiceTemplate from "./components/services/ServiceTemplate";
 import ItInfrastructure from "./components/services/ItInfrastructure";
 import DataProcessing from "./components/services/DataProcessing";
 import WebDevelopment from "./components/services/WebDevelopment";
@@ -23,6 +23,9 @@ import ProtectedResponse from "./components/protectedRoutes/ProtectedResponse";
 import ResetPassword from "./components/Login/ResetPassword";
 import OTP from "./components/Login/OTP";
 import ChangePassword from "./components/Login/ChangePassword";
+import Terms from "./components/home/Terms";
+import PrivacyPolicy from "./components/home/PrivacyPolicy";
+import RefundPolicy from "./components/home/RefundPolicy";
 import LoginProtectedRoutes from "./components/protectedRoutes/LoginProtectedRoutes";
 
 // Convert every a tag which are simple links to Link tag and import react-router-dom
@@ -55,6 +58,10 @@ function App() {
             path="thankyou"
             element={<ProtectedResponse Component={Thankyou} />}
           />
+          <Route path="termsandconditions" element={<Terms />} />
+          <Route path="privacypolicy" element={<PrivacyPolicy />} />
+          <Route path="refundpolicy" element={<RefundPolicy />} />
+
           <Route path="admin-login" element={<Login />} />
           <Route path="reset-password" element={<ResetPassword />} />
           <Route path="reset-password/otp" element={<OTP />} />
